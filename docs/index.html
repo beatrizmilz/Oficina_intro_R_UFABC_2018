@@ -24,37 +24,34 @@ class: center, middle, inverse, title-slide
 
 # Instrutora
 
-- **Beatriz Milz**, 25 anos, Diadema.
-
-- Bacharel em Gestão Ambiental (EACH/USP).
-
-- Mestre em Ciências no PPG-Análise Ambiental Integrada (UNIFESP/Diadema).
-
-- Atualmente no processo seletivo de Doutorado em Ciência Ambiental no PROCAM/IEE/USP.
-
-- Aprendendo R desde agosto de 2018.
-
-- Participa da comunidade [R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/) desde agosto de 2018.
-
-- Email:&lt;a href="mailto:beatriz.milz@hotmail.com"&gt;&lt;i class="fas fa-envelope-square"&gt;&lt;/i&gt;&amp;nbsp; beatriz.milz@hotmail.com&lt;/a&gt;&lt;br&gt;
-
-- Github:&lt;a href="http://github.com/beatrizmilz"&gt;&lt;i class="fab fa-github"&gt;&lt;/i&gt;&amp;nbsp; @beatrizmilz&lt;/a&gt; (repositório de código)&lt;br&gt;
+* Beatriz Milz
+  - Bacharel em Gestão Ambiental (EACH/USP).
+  - Mestre em Ciências no PPG-Análise Ambiental Integrada (UNIFESP/Diadema).
+  - Atualmente no processo seletivo de Doutorado em Ciência Ambiental no PROCAM/IEE/USP.
+  - Co-organizadora do Meetup [R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/).
+  - Email:&lt;a href="mailto:beatriz.milz@hotmail.com"&gt;&lt;i class="fas fa-envelope-square"&gt;&lt;/i&gt;&amp;nbsp; beatriz.milz@hotmail.com&lt;/a&gt;&lt;br&gt;
+  - Github:&lt;a href="http://github.com/beatrizmilz"&gt;&lt;i class="fab fa-github"&gt;&lt;/i&gt;&amp;nbsp; @beatrizmilz&lt;/a&gt; (repositório de código)&lt;br&gt;
 
 ---
 # Monitoras
 
 * Rosana Laura da Silva 
+  - Mestranda em Planejamento e Gestão do Território - UFABC
+  - Bacharel em Ciência e Tecnologia - UFABC
+  - Bacharel em Engenharia Ambiental e Urbana - UFABC
+  - LAPLAN - Laboratório de Planejamento e Gestão do Território
+  - MACROAMB - Projeto Temático FAPESP: Governança Ambiental da Macrometrópole Paulista faca à variabilidade climática.
 
 * Bruna de Souza Fernandes
+  - Cursando Bacharel em Ciência e Humanidades - UFABC
+  - Cursando Bacharel em Planejamento Territorial - UFABC
+  - LAPLAN - Laboratório de Planejamento e Gestão do Território
+  - MACROAMB - Projeto Temático FAPESP: Governança Ambiental da Macrometrópole Paulista faca à variabilidade climática.
 
 * Alissa Munerato
+  - R-Ladies São Paulo
 
----
-#Material
 
-* [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
-
-* [R for Reproducible Scientific Analysis - SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/)
 
 ---
 class: center, middle
@@ -301,6 +298,39 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 ---
 
+## Classes Básicas ou Atômicas do R
+
+- **Character**: texto
+
+- **Integer**: números inteiros 
+
+- **Numeric**: números racionais 
+
+- **Complex**: números complexos (raramente usados para Análise de Dados) 
+
+- **Logical**: TRUE, FALSE
+
+- **Factor**: variavéis categóricas
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## Tipos de objetos:
+
+- **Vector**: armazena elementos de mesma classe. &lt;br&gt;&lt;/br&gt;   
+- **Matrix**: vetores de duas dimensões que armazenam elementos de mesma classe. &lt;br&gt;&lt;/br&gt;
+- **List**: tipo especial de vetor que aceita elementos de classes diferentes. &lt;br&gt;&lt;/br&gt;
+- **Data.frame**: são tabelas de dados com linhas e colunas, como uma tabela do Excel. Como são listas, essas colunas podem ser de classes diferentes.
+
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+---
+
 ## Atalhos importantes
 
 Os atalhos facilitam. Veja os principais:&lt;br&gt;&lt;/br&gt;
@@ -489,39 +519,7 @@ ativo
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
----
 
-## Classes Básicas ou Atômicas do R
-
-- **Character**: texto
-
-- **Integer**: números inteiros 
-
-- **Numeric**: números racionais 
-
-- **Complex**: números complexos (raramente usados para Análise de Dados) 
-
-- **Logical**: TRUE, FALSE
-
-- **Factor**: variavéis categóricas
-
-
-
-Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
-
----
-
-## Tipos de objetos:
-
-- **Vector**: armazena elementos de mesma classe. &lt;br&gt;&lt;/br&gt;   
-- **Matrix**: vetores de duas dimensões que armazenam elementos de mesma classe. &lt;br&gt;&lt;/br&gt;
-- **List**: tipo especial de vetor que aceita elementos de classes diferentes. &lt;br&gt;&lt;/br&gt;
-- **Data.frame**: são tabelas de dados com linhas e colunas, como uma tabela do Excel. Como são listas, essas colunas podem ser de classes diferentes.
-
-
-
-
-Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 ---
 
@@ -660,7 +658,7 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 ---
 
-## Importação de arquivos
+## Importar arquivos
 
 Pacote **readr**: funções para ler arquivos texto
 - read_csv
@@ -676,6 +674,11 @@ Pacote **readxl**: função para ler arquivo Excel
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
+---
+## Importar arquivos:
+RStudio -&gt; Environment -&gt; Import Dataset 
+
+(Estou escrevendo esse slide)
 ---
 
 ### View e Summary
@@ -1149,26 +1152,79 @@ População na MMP em 2018, por RM/AU, segundo os dados da SEADE:
 class: center, middle
 # Conclusão
 
+## Referências e materiais de estudo
+
+[Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+[R for Reproducible Scientific Analysis - SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/)
 ---
-# Materiais de estudo/Referências
+# Onde estudar mais?
+- [Repositório de materias de estudo com R](https://github.com/beatrizmilz/materiais_estudo_R)
 
+- Curso R
 
-- [R Cookbook - Statistical analysis](http://www.cookbook-r.com/Statistical_analysis/) - Regression and correlation, t-test, Frequency tests, ANOVA,     Logistic regression,    Homogeneity of variance,     Inter-rater reliability.
+  - [Curso-R](http://curso-r.com/) - Cursos presenciais sobre R.
 
-- [R Cookbook - Graphs](http://www.cookbook-r.com/Graphs/)
+  - [Material Curso-R](http://material.curso-r.com/) - Material disponibilizado pela Curso-R para estudo.
+
+  - [Blog Curso-R](https://www.curso-r.com/blog/) - Blog do Curso-R com diversos conteúdos interessantes.
+
+- [Datacamp](https://www.datacamp.com/courses/tech:r): [Introdução ao R/Introduction to R](https://www.datacamp.com/courses/free-introduction-to-r) - Conteúdo: introdução, tipos de dados no R: vetores, matrizes, fatores, data frames, listas.
 
 ---
-# Materiais de estudo/Referências
+# Onde estudar mais?
 
+- Software Carpentry - [Programming with R](http://swcarpentry.github.io/r-novice-inflammation/)
+- Software Carpentry - [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder/)
+---
+# Disciplinas
+
+- **Disciplina FLS6397:** Introdução à Programação e Ferramentas Computacionais para as Ciências Sociais 
+- **USP - FFLCH**
+- O material da disciplina é disponibilizado no GITHUB pelo Leonardo Barone. Link: https://github.com/leobarone/FLS6397_2018
+
+- **Conteúdo**: 1 - Básico da Programação em R 2 - Estruturas de dados e manipulação de bases em R 3 - Tabelas e Gráficos em R 4 – R e integração com SQL 5 - Git básico 6 - Markdown básico 7 - LaTex básico 8 - Captura de dados na internet 9 - Textos, corpus e processamento de linguagem natural 10 - Mapas e GIS 11 - Redes e grafos
+---
+# Disciplinas
+
+- **Disciplina EPI5713** - Introdução ao R para a Análise de Dados 
+- **USP - FSP**
+- **Conteúdo**: 1 - Introdução (instalação do R, RStudio, estrutura dos dados, pacotes e abertura de bancos de dados de outras fontes). 2 – Limpeza de bancos de dados (criação, renomeação e exclusão de variáveis, alteração de valores, identificação de valores missing, alteração do tipo de variável, fusão de bancos de dados). 3 – Análise descritiva (descrição das variáveis, análise de frequência e tabelas bivariadas). 4 – Análise bivariada (Chi-quadrado, teste-t e correlação). 5 – Regressão (regressão linear e logística). 6 – Mapas no R (shapefiles e visualização de dados em mapas). 7 – Gráficos com o ggplot2 (gráficos de dispersão, pirâmides populacionais, boxplots e histogramas).
+
+---
+# Disciplinas
+
+- **Disciplina 	BIE5782** - Uso da Linguagem R para Análise de Dados em Ecologia
+- **USP - IB**
+- **Conteúdo**: 1. Introdução: histórico e filosofia de trabalho do R, breve histórico da linguagem S e do R, exemplo de uma sessão de trabalho no R. 2. Funções no R e sua aplicação: matemáticas, lógicas, e de distribuições de probabilidade. 3. Leitura e manipulação de dados: tipos de variáveis e estrutura dos dados, transformações de dados, operações vetoriais e matriciais, indexação, agregação e transformação de estrutura de dados. 4. Análise exploratória de dados: estatísticas descritivas, gráficos exploratórios. 5. Modelos lineares: lógica geral em R, regressão linear, análise de variância, verificação das pressuposições dos modelos lineares. 6. Simulações e reamostragem. 7. Noções de programação em linguagem S: fundamentos de programação orientada a objetos; lógica e controle de fluxo em linguagem S; procedimentos vetoriais de programação.
+---
+# Livros
+
+- [Hands-On Programming with R](https://rstudio-education.github.io/hopr/) - Livro em inglês, disponibilizado gratuitamente online.  Conteúdo: básico do R e RStudio, Pacotes, objetos, tipos de dados, funções, etc.
 
 - [R for Data Science](https://r4ds.had.co.nz/) - Livro em inglês, disponibilizado gratuitamente online. Conteúdo muito bom sobre R.
 
-- [Curso-R](http://curso-r.com/) - Cursos presenciais sobre R.
+- [R Cookbook](http://www.cookbook-r.com/)
+  
+- [Ciência de Dados com R - Instituto Brasileiro de Pesquisa e Análise de Dados](https://www.ibpad.com.br/o-que-fazemos/publicacoes/introducao-ciencia-de-dados-com-r)
+  
+- Biblioteca do R-Project, livros em diversas línguas: https://www.r-project.org/doc/bib/R-books.html
 
-- [Material Curso-R](http://material.curso-r.com/) - Material disponibilizado pela Curso-R para estudo.
+---
+# Cheatsheets
 
-- [Blog Curso-R](https://www.curso-r.com/blog/) - Blog do Curso-R com diversos conteúdos interessantes.
-
+- Ambiente de desenvolvimento RSTUDIO: [Português](https://github.com/rstudio/cheatsheets/raw/master/translations/portuguese/rstudio-IDE-cheatsheet-portuguese.pdf), [Inglês](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf)
+- [Importar dados/Data import](https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf) - Inglês
+- [Visualização de dados](https://github.com/rstudio/cheatsheets/raw/master/translations/portuguese/ggplot2-cheatsheet-portuguese.pdf) - Português
+- [Manipular dados](https://github.com/rstudio/cheatsheets/raw/master/translations/portuguese/data-wrangling-cheatsheet-portuguese.pdf) - Português
+- [Data transformation](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf) - Inglês
+- [Trabalhar com textos/ String manipulation](https://github.com/rstudio/cheatsheets/raw/master/strings.pdf) - Inglês
+- [Comunicar seus resultados - RMarkdown](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) - Inglês
+- [Criar gráficos com Ggplot2](https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf) - Inglês
+- [LaTeX](https://wch.github.io/latexsheet/) - Inglês
+- [Expressões regulares](https://github.com/rstudio/cheatsheets/raw/master/regex.pdf) - Inglês
+- Pode conferir também outras cheatsheets em inglês no site: https://www.rstudio.com/resources/cheatsheets/ 
+---
 
 # Links interessantes
 * [Dados de execução orçamentária da PMSP](https://beatrizmilz.github.io/DadosExecucaoOrcamentariaPMSP/index.html)

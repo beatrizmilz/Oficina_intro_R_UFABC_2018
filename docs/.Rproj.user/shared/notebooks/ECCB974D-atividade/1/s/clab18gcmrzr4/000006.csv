@@ -1,4 +1,0 @@
-"0","#Juntar os dados de divisão administrativa baseados nos municípios "
-"0","#contidos na tabela da Emplasa"
-"0","mmp_emplasa2 <- left_join(mmp_emplasa, divisao_adm, by=""codigo_ibge"") "
-"0","View(mmp_emplasa2)"

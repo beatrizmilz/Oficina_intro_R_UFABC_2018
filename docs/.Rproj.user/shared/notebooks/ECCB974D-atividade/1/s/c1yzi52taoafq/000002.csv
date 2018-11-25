@@ -1,2 +1,0 @@
-"0","# Importar a tabela para o R"
-"0","mmp_emplasa <- readxl::read_xlsx(""dados/delimitacaoterritorialMMP_Emplasa.xlsx"")"

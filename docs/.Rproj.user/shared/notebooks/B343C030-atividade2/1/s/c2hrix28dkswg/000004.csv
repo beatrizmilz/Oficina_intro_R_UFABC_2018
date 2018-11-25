@@ -1,2 +1,0 @@
-"0","#Ler o arquivo csv criado:"
-"0","seade_mmp_emplasa <- read_csv(""dados/seade_mmp_emplasa.csv"")"

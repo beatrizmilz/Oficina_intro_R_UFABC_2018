@@ -1,2 +1,0 @@
-"0","#Renomear as colunas"
-"0","names(divisao_adm) <- c(""codigo_ibge"", ""municipio"", ""regiao_administrativa"", ""regiao_de_governo"", ""regiao_metropolitana"", ""aglomeracoes_urbanas"", ""rm_au"")"

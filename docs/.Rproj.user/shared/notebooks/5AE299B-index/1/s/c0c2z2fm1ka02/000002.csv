@@ -1,6 +1,0 @@
-"0","pop_mmp <- seade_mmp_emplasa %>% "
-"0","group_by(ano) %>%"
-"0","  summarise(PopulacaoTotal = sum(populacao)) %>% "
-"0","  mutate(PopulacaoTotal = PopulacaoTotal/1000000)  #transformar em milhões "
-"0","pop_mmp <- round(pop_mmp, 2)"
-"0","# Segundo os dados da SEADE, atualmente (em 2018) a MMP tem  `r pop_mmp[5,2]` milhões de habitantes."

@@ -1,5 +1,0 @@
-"0","# Cria a tabela e faz o left join baseado no código IBGE"
-"0","seade_mmp_emplasa <- left_join(mmp_emplasa2, seade_imp, by=""codigo_ibge"")"
-"0","# A coluna de município está repetida, então apago uma delas. "
-"0","seade_mmp_emplasa$municipio.y <- NULL"
-"0","head(seade_mmp_emplasa)"
