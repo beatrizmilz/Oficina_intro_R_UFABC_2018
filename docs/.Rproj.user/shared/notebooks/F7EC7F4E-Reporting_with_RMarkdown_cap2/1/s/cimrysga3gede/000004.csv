@@ -1,0 +1,4 @@
+"0","mtcars %>%"
+"0","  group_by(factor(cyl)) %>%"
+"0","  ggvis(~mpg, ~wt, fill = ~cyl) %>%"
+"0","  layer_points()"

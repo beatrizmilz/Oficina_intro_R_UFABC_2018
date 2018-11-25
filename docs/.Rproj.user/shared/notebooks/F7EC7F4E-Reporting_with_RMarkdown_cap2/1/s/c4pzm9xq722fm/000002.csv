@@ -1,0 +1,3 @@
+"0","mod <- lm(ozone ~ temp, data = means)"
+"2","Error in is.data.frame(data) : objeto 'means' não encontrado
+"

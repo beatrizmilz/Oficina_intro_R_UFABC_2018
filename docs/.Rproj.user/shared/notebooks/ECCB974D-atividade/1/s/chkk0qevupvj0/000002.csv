@@ -1,0 +1,3 @@
+"0","#Renomear as colunas"
+"0","names(seade_imp) <- c(""municipio"", ""ano"", ""populacao"", ""populacao_masculina"", ""populacao_feminina"", ""razao_de_sexos"", ""populacao_urbana"", ""populacao_rural"", ""grau_urbanizacao_porcentagem"", ""codigo_ibge"")"
+"0","View(seade_imp)"

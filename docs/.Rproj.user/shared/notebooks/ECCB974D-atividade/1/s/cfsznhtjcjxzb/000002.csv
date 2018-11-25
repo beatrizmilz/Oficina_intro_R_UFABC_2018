@@ -1,0 +1,2 @@
+"0","# Padronizar e deixar o código do IBGE configurado como número "
+"0","mmp_emplasa$codigo_ibge <- as.integer(mmp_emplasa$codigo_ibge) "

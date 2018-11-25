@@ -1,0 +1,3 @@
+"0","#Carregar a tabela de divisão administrativa"
+"0","divisao_adm <- readxl::read_xlsx(""dados/divisao_adm.xlsx"")"
+"0","View(divisao_adm)"

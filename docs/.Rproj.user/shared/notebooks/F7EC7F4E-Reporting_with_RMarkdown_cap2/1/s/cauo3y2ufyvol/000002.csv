@@ -1,0 +1,9 @@
+"0","means %>%"
+"0","  group_by(locale) %>%"
+"0","  ggvis(~temp, ~ozone) %>%"
+"0","  layer_points(fill = ~locale) %>%"
+"0","  layer_model_predictions(model = ""lm"", stroke = ~locale) %>%"
+"0","  hide_legend(""stroke"") %>%"
+"0","  scale_nominal(""stroke"", range = c(""darkorange"", ""darkred"", ""darkgreen"", ""darkblue""))"
+"2","Guessing formula = ozone ~ temp
+"

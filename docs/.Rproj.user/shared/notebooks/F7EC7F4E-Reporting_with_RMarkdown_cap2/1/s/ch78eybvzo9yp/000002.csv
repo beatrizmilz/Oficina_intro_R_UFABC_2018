@@ -1,0 +1,4 @@
+"0","means$locale <- ""north america"""
+"0","means$locale[means$lat < 10] <- ""south pacific"""
+"0","means$locale[means$long > -80 & means$lat < 10] <- ""south america"""
+"0","means$locale[means$long > -80 & means$lat > 10] <- ""north atlantic"""

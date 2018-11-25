@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Oficina de Introdução ao Software R</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Beatriz Milz" />
+    <link rel="stylesheet" href="css/default.css" type="text/css" />
+    <link rel="stylesheet" href="css/mmp.css" type="text/css" />
+    <link rel="stylesheet" href="css/mmp-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Oficina de Introdução ao Software R
+## UFABC - Campus São Bernardo do Campo
+### Beatriz Milz
+### 29/11/2018
+
+---
+
+
+
+
+# Instrutora
+
+- **Beatriz Milz**, 25 anos, Diadema.
+
+- Bacharel em Gestão Ambiental (EACH/USP).
+
+- Mestre em Ciências no PPG-Análise Ambiental Integrada (UNIFESP/Diadema).
+
+- Atualmente no processo seletivo de Doutorado em Ciência Ambiental no PROCAM/IEE/USP.
+
+- Aprendendo R desde agosto de 2018.
+
+- Participa da comunidade [R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/) desde agosto de 2018.
+
+- Email:&lt;a href="mailto:beatriz.milz@hotmail.com"&gt;&lt;i class="fas fa-envelope-square"&gt;&lt;/i&gt;&amp;nbsp; beatriz.milz@hotmail.com&lt;/a&gt;&lt;br&gt;
+
+- Github:&lt;a href="http://github.com/beatrizmilz"&gt;&lt;i class="fab fa-github"&gt;&lt;/i&gt;&amp;nbsp; @beatrizmilz&lt;/a&gt; (repositório de código)&lt;br&gt;
+
+---
+# Monitoras
+
+* Rosana Laura da Silva 
+
+* Bruna de Souza Fernandes
+
+* Alissa Munerato
+
+---
+#Material
+
+* [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+* [R for Reproducible Scientific Analysis - SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/)
+
+---
+class: center, middle
+# Introdução
+---
+
+
+## O que é o R?
+
+&gt; R is a free software environment for statistical computing and graphics. (https://www.r-project.org/)
+
+&gt; R é um ambiente de software livre para computação estatística e gráficos.
+
+
+* O R é open-source;
+
+* Muito usado por cientistas de dados, estatísticos e pesquisadores.
+
+
+&lt;img src="imagens/Rlogo.png" width="40%" style="display: block; margin: auto;" /&gt;
+---
+
+## Ciclo da ciência de dados
+
+&lt;img src="imagens/data-science.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+Fonte: [Livro R for Data Science](http://r4ds.had.co.nz/)
+---
+## O R é uma linguagem de programação.
+
+Qual é a vantagem?
+* É um texto
+
+* É reprodutível 
+
+* Dá para compartilhar!
+---
+## Reproducible Research / Ciência Reprodutível
+&gt; *"The goal of reproducible research is to tie specific instructions to data analysis and experimental data so that scholarship can be recreated, better understood and verified."*
+
+&gt; *"O objetivo da pesquisa reprodutível é vincular instruções específicas à análise de dados e dados experimentais para que os estudos possam ser recriados, melhor compreendidos e verificados."*
+
+Fonte: [CRAN Task View: Reproducible Research](https://cran.r-project.org/view=ReproducibleResearch)
+
+---
+## O que podemos fazer com o R?
+
+* Análise de dados - Estatística, modelagem, etc.
+
+* Visualização de dados
+
+* Apresentações
+
+* Relatórios dinâmicos
+
+* Escrever livros - [Pacote Bookdown](https://bookdown.org/)
+
+* Mineração de dados
+
+* Muito mais ...
+
+---
+## RStudio
+
+**RStudio** é o IDE da Linguagem R, ou seja, o ambiente que utilizamos para editar e executar os códigos em R.
+
+* Facilita a utilização do R.
+
+## Instalação R e R Studio
+
+
+- [Instalação do R](https://cloud.r-project.org) 
+
+
+- [Instalação do R Studio](https://www.rstudio.com/products/rstudio/download/#download)
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+## RStudio
+&lt;img src="imagens/01-rstudio.png" width="100%" style="display: block; margin: auto;" /&gt;
+Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
+---
+## RStudio
+&lt;img src="imagens/01-rstudio-script.png" width="100%" style="display: block; margin: auto;" /&gt;
+Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
+---
+## Projetos
+
+&gt; *"A good project layout will ultimately make your life easier: It will help ensure the integrity of your data; It makes it simpler to share your code with someone else (a lab-mate, collaborator, or supervisor); It allows you to easily upload your code with your manuscript submission; It makes it easier to pick the project back up after a break."*
+    
+
+&gt; *"Um bom layout de projeto facilitará sua vida: ajudará a garantir a integridade de seus dados; facilita o compartilhamento de seu código com outra pessoa (colega de laboratório, colaborador ou orientador); ele permite que você facilmente faça o upload do seu código com a submissão do seu manuscrito; torna-se mais fácil recuperar o projeto depois de um intervalo. "*
+
+Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html)
+
+---
+## Criando um projeto
+
+1. Clique na opção **“File”** do menu, e então em **“New Project”**.
+
+1.  Clique em **“New Directory”**.
+
+1.  Clique em **“New Project”**.
+
+1.  Escreva o nome do diretório (pasta) onde deseja manter seu projeto, ex “my_project”.
+
+1.  Clique no botão **“Create Project”**.
+
+---
+## Boas práticas para organizar seu projeto
+
+
+*1. **Tratar dados como somente leitura: **esse é provavelmente o objetivo mais importante da configuração de um projeto. Os dados geralmente consomem tempo e/ou são caros para coletar. Trabalhar com eles interativamente (por exemplo, no Excel), onde eles podem ser modificados, significa que você nunca tem certeza de onde os dados vieram, ou como eles foram modificados desde a coleta. Portanto, é uma boa ideia tratar seus dados como “somente leitura”.*
+
+*2. **Qualquer coisa gerada pelos seus scripts deve ser tratada como descartável: **todos devem poder ser criados novamente a partir dos seus scripts. Existem várias maneiras diferentes de gerenciar essa saída. Acho útil ter uma pasta de saída com subdiretórios diferentes para cada análise separada. Isso fica mais fácil depois, já que muitas das análises são exploratórias e não acabam sendo usadas no projeto final, e algumas análises são compartilhadas entre os projetos.*
+
+
+Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html)
+---
+
+## Criando um projeto
+
+1. Clique na opção **“File”** do menu, e então em **“New Project”**.
+
+1.  Clique em **“New Directory”**.
+
+1.  Clique em **“New Project”**.
+
+1.  Escreva o nome do diretório (pasta) onde deseja manter seu projeto, ex “my_project”.
+
+1.  Clique no botão **“Create Project”**.
+
+---
+
+## Rmarkdown
+* É um tipo de arquivo que suporta códigos em R, texto, markdown e outros formatos.
+* O markdown é uma linguagem de marcação simples. 
+
+* [Rmarkdown Cheatsheet](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+* Possibilita exportar diferentes tipos de arquivos.
+&lt;br&gt;
+
+&lt;img src="imagens/markdown.png" width="40%" style="display: block; margin: auto;" /&gt;
+---
+## Vantagens de trabalhar com o R e o Rmarkdown
+
+É possível elaborar relatórios no Rmarkdown.
+Porque é interessante?
+
+* É possível escrever os códigos que geram as tabelas e gráficos.
+
+
+* Quando o banco de dados for atualizado não será necessário refazer os gráficos. Apenas necessário compilar novamente.
+
+
+* Facilita o compartilhamento dos dados e análises com outros pesquisadores.
+
+
+* É possível exportar em diversos formatos, inclusive transformar o relatório em apresentações. 
+---
+
+## Já temos um projeto, agora vamos criar um arquivo .Rmd
+
+&lt;img src="imagens/1.PNG" width="20%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="imagens/New_R_Markdown.png" width="50%" style="display: block; margin: auto;" /&gt;
+---
+## Pacotes no R
+
+**Pacotes** são coleções de funções, dados e documentação que estendem as capacidades do R básico.
+
+Eles precisam ser instalados e carregados.
+
+
+&lt;img src="imagens/icon-packages.jpg" width="40%" style="display: block; margin: auto;" /&gt;
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## Instalação de Pacotes:
+
+- Via CRAN: install.packages("nome-do-pacote").
+
+
+```r
+install.packages("dplyr")
+```
+
+- Via Github: devtools::install_github("nome-do-repo/nome-do-pacote").
+
+
+```r
+devtools::install_github("tidyverse/dplyr")
+```
+
+
+## Carregar pacotes:
+
+- library(nome-do-pacote)
+
+
+```r
+library(dplyr)
+```
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## Dicas sobre Pacotes
+
+1. Você só precisa instalar o pacote uma vez, mas precisa carregá-lo sempre que começar uma nova sessão;
+
+2. Para instalar o pacote use as aspas;  
+
+3. Para carregar o pacote, **não** utilize as aspas.
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## Help!
+
+- Pedir ajuda: **help**(nome_da_funcao) ou **?**nome_da_funcao.
+
+
+```r
+help(sum)
+?sum
+```
+
+- Se a dúvida permanecer, procure no Stack OverFlow, Google.
+  - E se ainda tiver dúvidas, pergunte para a comunidade (há grupos no Telegram e outras redes sociais).
+  
+  
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## Atalhos importantes
+
+Os atalhos facilitam. Veja os principais:&lt;br&gt;&lt;/br&gt;
+
+- CTRL + ENTER: roda a linha selecionada no script.&lt;br&gt;&lt;/br&gt;
+- ALT + **-**: (&lt;-) sinal de atribuição.&lt;br&gt;&lt;/br&gt;
+- CTRL + SHIFT + M: (%&gt;%) operador pipe.&lt;br&gt;&lt;/br&gt;
+- CTRL + ALT + I: cria um chunk do RMarkdown.
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## R como calculadora
+
+
+```r
+2 + 5    # adição
+```
+
+```
+## [1] 7
+```
+
+```r
+9 - 4    # subtração
+```
+
+```
+## [1] 5
+```
+
+```r
+5 * 2    # multiplicação
+```
+
+```
+## [1] 10
+```
+
+```r
+7 / 5    # divisão
+```
+
+```
+## [1] 1.4
+```
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## R como calculadora
+
+
+```r
+8 ^ 2    # potenciação
+```
+
+```
+## [1] 64
+```
+
+```r
+sqrt(1024) # radiciação
+```
+
+```
+## [1] 32
+```
+
+A ordem matemática das operações também vale no R.
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+## Funções matemáticas
+
+
+```r
+sin(1)  # trigonometry functions
+```
+
+```
+## [1] 0.841471
+```
+
+```r
+log(1)  # natural logarithm
+```
+
+```
+## [1] 0
+```
+
+```r
+log10(10) # base-10 logarithm
+```
+
+```
+## [1] 1
+```
+
+```r
+exp(0.5) # e^(1/2)
+```
+
+```
+## [1] 1.648721
+```
+
+Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
+---
+
+##Nomes de objetos e variáveis
+
+- Os nomes devem começar com uma letra. Podem conter letras, números, _ e .&lt;br&gt;&lt;/br&gt;
+- Recomendação do autor do livro R For Data Science: **usar_snake_case**, ou seja, palavras escritas em minúsculo separadas pelo underscore (_).&lt;br&gt;&lt;/br&gt;
+- O R é *case sensitive*, isto é, faz a diferenciação entre as letras minúsculas e maiúsculas. Portanto, um objeto chamado *teste* é diferente de um outro objeto chamado *Teste*.
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## Criando objetos no R
+
+- Para atribuir um valor a um objeto no R, utilizamos o operador **&lt;-**  &lt;br&gt;&lt;/br&gt;
+- O atalho ALT + **-** gera o operador **&lt;-** &lt;br&gt;&lt;/br&gt;
+- Todas as declarações R onde são criados objetos atribuindo valores a eles, tem a mesma forma:  
+
+&lt;center&gt;&lt;b&gt;nome_do_objeto &lt;- valor&lt;b&gt;&lt;/center&gt;
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## Exemplos de objetos e atribuição de valores
+
+
+```r
+nome_empregado &lt;- "Tom Cruise de Souza e Silva"
+nome_empregado
+```
+
+```
+## [1] "Tom Cruise de Souza e Silva"
+```
+
+```r
+horas_trabalhadas &lt;- 160
+horas_trabalhadas
+```
+
+```
+## [1] 160
+```
+
+```r
+salario &lt;- 3984.23
+salario
+```
+
+```
+## [1] 3984.23
+```
+
+```r
+ativo &lt;- TRUE
+ativo
+```
+
+```
+## [1] TRUE
+```
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## Classes Básicas ou Atômicas do R
+
+- **Character**: texto
+
+- **Integer**: números inteiros 
+
+- **Numeric**: números racionais 
+
+- **Complex**: números complexos (raramente usados para Análise de Dados) 
+
+- **Logical**: TRUE, FALSE
+
+- **Factor**: variavéis categóricas
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## Tipos de objetos:
+
+- **Vector**: armazena elementos de mesma classe. &lt;br&gt;&lt;/br&gt;   
+- **Matrix**: vetores de duas dimensões que armazenam elementos de mesma classe. &lt;br&gt;&lt;/br&gt;
+- **List**: tipo especial de vetor que aceita elementos de classes diferentes. &lt;br&gt;&lt;/br&gt;
+- **Data.frame**: são tabelas de dados com linhas e colunas, como uma tabela do Excel. Como são listas, essas colunas podem ser de classes diferentes.
+
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## Operadores Lógicos
+
+- Igual a: **==** &lt;br&gt;&lt;/br&gt;
+- Diferente de: **!=** &lt;br&gt;&lt;/br&gt;
+- Maior que: **&gt;** &lt;br&gt;&lt;/br&gt;
+- Maior ou igual: **&gt;=** &lt;br&gt;&lt;/br&gt;
+- Menor que: **&lt;** &lt;br&gt;&lt;/br&gt;
+- Menor ou igual: **&lt;=** &lt;br&gt;&lt;/br&gt;
+
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## Operadores Lógicos
+- Negação: **!** &lt;br&gt;&lt;/br&gt;
+- E: **&amp;** &lt;br&gt;&lt;/br&gt;
+- OU: **|** &lt;br&gt;&lt;/br&gt;
+
+## NA
+
+Uma característica importante do R que pode dificultar a comparação são os valores ausentes ou **NAs** (não disponíveis). 
+
+**NA** representa um valor desconhecido. 
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## NA
+Operações envolvendo um valor desconhecido também será desconhecido:
+
+
+```r
+NA &gt; 10
+```
+
+```
+## [1] NA
+```
+
+```r
+10 == NA
+```
+
+```
+## [1] NA
+```
+
+```r
+NA + 10
+```
+
+```
+## [1] NA
+```
+
+```r
+NA / 2
+```
+
+```
+## [1] NA
+```
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## NA
+
+
+
+```r
+NA == NA
+```
+
+```
+## [1] NA
+```
+
+&lt;br&gt;&lt;/br&gt;
+
+**is.na()** é a função que testa se um objeto é NA.
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+
+---
+
+## O Tidyverse
+
+É uma coleção de pacotes R projetados para a ciência de dados. Todos os pacotes compartilham uma mesma filosofia de desenvolvimento, sintaxe e estruturas de dados. [https://www.tidyverse.org/](https://www.tidyverse.org/)
+
+
+```r
+library(tidyverse)
+```
+
+&lt;img src="imagens/Tidyverse_packages.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## Pacotes do Tidyverse
+
+- **ggplot2**: cria gráficos &lt;br&gt;&lt;/br&gt;
+- **dplyr**: manipulação de dados &lt;br&gt;&lt;/br&gt;
+- **tidyr**: arrumar os dados &lt;br&gt;&lt;/br&gt;
+- **readr**: leitura dos dados &lt;br&gt;&lt;/br&gt;
+- **purrr**: ferramentas para programação funcional, trabalha com funções e vetores &lt;br&gt;&lt;/br&gt;
+- **tibble**: dataframes modernos, mais simples de manipular &lt;br&gt;&lt;/br&gt;
+- **magrittr**: facilita a escrita e leitura do código &lt;br&gt;&lt;/br&gt;
+- **stringr**: trabalha com strings &lt;br&gt;&lt;/br&gt;
+- **forcats**: trabalha com fatores &lt;br&gt;&lt;/br&gt;
+- **lubridate**: trabalha com datas
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+
+---
+
+## Importação de arquivos
+
+Pacote **readr**: funções para ler arquivos texto
+- read_csv
+- **read_csv2**
+- read_delim
+- read_log
+- read_rds
+
+Pacote **readxl**: função para ler arquivo Excel  
+- **read_excel**
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+### View e Summary
+
+- Para visualizar um objeto: **View**(nome-do-objeto)
+
+- **summary()**: mostra informações sobre as colunas do dataframe:
+
+
+```r
+summary(mtcars)
+```
+
+```
+##       mpg             cyl             disp             hp       
+##  Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  
+##  1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  
+##  Median :19.20   Median :6.000   Median :196.3   Median :123.0  
+##  Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  
+##  3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  
+##  Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  
+##       drat             wt             qsec             vs        
+##  Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  
+##  1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  
+##  Median :3.695   Median :3.325   Median :17.71   Median :0.0000  
+##  Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  
+##  3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  
+##  Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  
+##        am              gear            carb      
+##  Min.   :0.0000   Min.   :3.000   Min.   :1.000  
+##  1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  
+##  Median :0.0000   Median :4.000   Median :2.000  
+##  Mean   :0.4062   Mean   :3.688   Mean   :2.812  
+##  3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
+##  Max.   :1.0000   Max.   :5.000   Max.   :8.000
+```
+
+
+Fonte: Editado - [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+
+
+---
+## O operador %&gt;%, o Pipe
+
+Imagine uma receita que tenha as instruções: junte os ingredientes, misture e leve ao forno. Na forma usual do R, essas instruções provavelmente seriam assim:
+
+
+**forno(misture(junte(ingredientes)))**
+
+
+Dessa forma temos que pensar “de dentro para fora”. O primeiro comando que lemos é forno, sendo que essa é a última operação que será realizada.
+
+Com o operador pipe seria algo assim:
+
+
+**ingredientes %&gt;% junte %&gt;% misture %&gt;% forno**
+
+
+É mais intuitivo!
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+  
+---
+
+## O operador %&gt;%, o Pipe
+
+Para ficar mais fácil: pense no Pipe %&gt;% como um operador que efetua as operações à direita nos valores que estão à esquerda.
+
+Ou ainda, o operador %&gt;%  passa o que está à esquerda como argumento para a operação da direita.
+
+**Atalho**: CTRL + SHIFT + M
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+---
+
+## dplyr
+
+- A ideia do pacote **dplyr** é tornar a **manipulação de dados** explícita utilizando verbos que indicam a ação a ser realizada. 
+
+- O encadeamento dos verbos com o banco de dados é realizado com o operador **pipe**: **%&gt;%**
+
+- O dplyr foi desenhado para trabalhar com o operator pipe **%&gt;%** do pacote magritrr.
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+
+## Os 6 verbos do dplyr 
+
+- **filter**(): seleciona linhas &lt;br&gt;&lt;/br&gt;
+- **arrange**(): ordena de acordo com uma ou mais colunas &lt;br&gt;&lt;/br&gt;
+- **select**(): seleciona colunas &lt;br&gt;&lt;/br&gt;
+- **mutate**(): cria/modifica colunas &lt;br&gt;&lt;/br&gt;
+- **summarise**(): sumariza/agrega colunas &lt;br&gt;&lt;/br&gt;
+- **group_by**(): agrupa colunas
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+---
+# ggplot2 
+
+- É um pacote usado para visualização de dados.
+
+- É uma implementação da Grammar of Graphics de Leland Wilkinson - um esquema geral para visualização de dados que divide gráficos em componentes semânticos como escalas e camadas.
+
+- [Cheatsheet em português](https://www.rstudio.com/wp-content/uploads/2016/03/ggplot2-cheatsheet-portuguese.pdf)
+
+- Material interessante: [Code Your Graph - A Workshop on Visualizing Your Data with ggplotby Alison Presmanes Hill &amp; Julianne Myers](https://alison.rbind.io/html/jamboree_heart_ggplot.html)
+
+&lt;img src="imagens/ggplot2.png" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+class: center, middle
+background-image: url("imagens/logo_MA_color.png")
+background-size: contain, 50% 50%, cover
+
+# É um desafio!
+
+
+## Estudo de caso Parte 1 - Municípios da MMP
+
+
+**Objetivos:** Preparar os dados referentes à MMP.
+---
+
+#Macrometrópole Paulista
+
+Projeto Temático Fapesp: Governança ambiental da macrometrópole paulista face à variabilidade climática&lt;br&gt;
+
+&lt;img src="imagens/mmp.jpg" style="display: block; margin: auto;" /&gt;
+
+
+---
+#Delimitação territorial da Macrometrópole Paulista (MMP)
+* Diferentes delimitações:
++ [Empresa Paulista de Planejamento Metropolitano](https://www.emplasa.sp.gov.br/MMP) 
+(EMPLASA): 174 municípios
++ [Departamento de Águas e Energia Elétrica](http://www.daee.sp.gov.br) 
+(DAEE): 180 municípios
+---
+# Pacotes:
+##Instalar pacotes:
+
+Obs: apenas se necessário! Se você tentar carregar e aparecer a mensagem `there is no package called ‘nome_do_pacote’`, é só apagar o # no início da linha e rodar esse código para instalar.
+
+```r
+# install.packages("tidyverse")
+```
+
+## Carregar os pacotes necessários:
+
+```r
+library(tidyverse)
+```
+
+---
+# Estudo de caso
+
+Fonte: Tabela elaborada pelo LAPLAM - UFABC
+Atualizado em outubro/2018
+
+
+```r
+#Carregar a tabela de divisão administrativa
+divisao_adm &lt;- readxl::read_xlsx("dados/divisao_adm.xlsx")
+summary(divisao_adm)
+```
+
+```
+##  Código IBGE         Município         Região Administrativa
+##  Length:192         Length:192         Length:192           
+##  Class :character   Class :character   Class :character     
+##  Mode  :character   Mode  :character   Mode  :character     
+##  Região de Governo  Região Metropolitana Aglomerações Urbanas
+##  Length:192         Length:192           Length:192          
+##  Class :character   Class :character     Class :character    
+##  Mode  :character   Mode  :character     Mode  :character    
+##     rm_au          
+##  Length:192        
+##  Class :character  
+##  Mode  :character
+```
+---
+# Estudo de caso
+
+
+```r
+#Renomear as colunas
+names(divisao_adm) &lt;- c("codigo_ibge", "municipio", "regiao_administrativa", "regiao_de_governo", "regiao_metropolitana", "aglomeracoes_urbanas", "rm_au")
+```
+
+
+```r
+summary(divisao_adm)
+```
+
+```
+##  codigo_ibge         municipio         regiao_administrativa
+##  Length:192         Length:192         Length:192           
+##  Class :character   Class :character   Class :character     
+##  Mode  :character   Mode  :character   Mode  :character     
+##  regiao_de_governo  regiao_metropolitana aglomeracoes_urbanas
+##  Length:192         Length:192           Length:192          
+##  Class :character   Class :character     Class :character    
+##  Mode  :character   Mode  :character     Mode  :character    
+##     rm_au          
+##  Length:192        
+##  Class :character  
+##  Mode  :character
+```
+
+---
+# Estudo de caso
+
+
+```r
+#Transformar a coluna do código IBGE em número
+divisao_adm$codigo_ibge &lt;- as.integer(divisao_adm$codigo_ibge) 
+```
+
+
+```r
+summary(divisao_adm)
+```
+
+```
+##   codigo_ibge       municipio         regiao_administrativa
+##  Min.   :3110509   Length:192         Length:192           
+##  1st Qu.:3512630   Class :character   Class :character     
+##  Median :3526803   Mode  :character   Mode  :character     
+##  Mean   :3520847                                           
+##  3rd Qu.:3545040                                           
+##  Max.   :3557006                                           
+##  regiao_de_governo  regiao_metropolitana aglomeracoes_urbanas
+##  Length:192         Length:192           Length:192          
+##  Class :character   Class :character     Class :character    
+##  Mode  :character   Mode  :character     Mode  :character    
+##                                                              
+##                                                              
+##                                                              
+##     rm_au          
+##  Length:192        
+##  Class :character  
+##  Mode  :character  
+##                    
+##                    
+## 
+```
+
+
+---
+# Estudo de caso
+
+
+
+```r
+# Importar a tabela para o R
+mmp_emplasa &lt;- readxl::read_xlsx("dados/delimitacaoterritorialMMP_Emplasa.xlsx")
+summary(mmp_emplasa)
+```
+
+```
+##  Municípios EMPLASA Código IBGE       
+##  Length:174         Length:174        
+##  Class :character   Class :character  
+##  Mode  :character   Mode  :character
+```
+---
+# Estudo de caso
+
+```r
+# Renomear as colunas para padronizar os nomes
+names(mmp_emplasa) &lt;- c("municipio","codigo_ibge")
+
+summary(mmp_emplasa)
+```
+
+```
+##   municipio         codigo_ibge       
+##  Length:174         Length:174        
+##  Class :character   Class :character  
+##  Mode  :character   Mode  :character
+```
+
+---
+# Estudo de caso
+
+```r
+# Padronizar e deixar o código do IBGE configurado como número 
+mmp_emplasa$codigo_ibge &lt;- as.integer(mmp_emplasa$codigo_ibge) 
+
+summary(mmp_emplasa)
+```
+
+```
+##   municipio          codigo_ibge     
+##  Length:174         Min.   :3500600  
+##  Class :character   1st Qu.:3513529  
+##  Mode  :character   Median :3526803  
+##                     Mean   :3529095  
+##                     3rd Qu.:3545196  
+##                     Max.   :3557006
+```
+---
+# Estudo de caso - Dplyr Join
+
+```r
+#Juntar os dados de divisão administrativa baseados nos municípios 
+#contidos na tabela da Emplasa
+mmp_emplasa2 &lt;- left_join(mmp_emplasa, divisao_adm, by="codigo_ibge") 
+```
+
+
+```r
+# Deletar a coluna que fica repetida
+mmp_emplasa2$municipio.y &lt;- NULL
+
+summary(mmp_emplasa)
+```
+
+```
+##   municipio          codigo_ibge     
+##  Length:174         Min.   :3500600  
+##  Class :character   1st Qu.:3513529  
+##  Mode  :character   Median :3526803  
+##                     Mean   :3529095  
+##                     3rd Qu.:3545196  
+##                     Max.   :3557006
+```
+
+---
+# Podemos cruzar com outros dados!
+Dados utilizados no estudo de caso:
+
+- Portal de Estatísticas do Estado de São Paulo - Informações dos Municípios Paulistas - 
+http://www.imp.seade.gov.br/frontend/
+- Data do download dos dados: 18/11/2018.
+
+
+```r
+# Importar a tabela para o R
+seade_imp &lt;- read.csv2("dados/imp_2018-11-18_00-43.csv", header=TRUE, stringsAsFactors=FALSE, fileEncoding="latin1")
+View(seade_imp)
+```
+---
+# Estudo de caso
+
+
+```r
+#Renomear as colunas
+names(seade_imp) &lt;- c("municipio", "ano", "populacao", "populacao_masculina", "populacao_feminina", "razao_de_sexos", "populacao_urbana", "populacao_rural", "grau_urbanizacao_porcentagem", "codigo_ibge")
+```
+
+
+```r
+summary(seade_imp)
+```
+
+```
+##   municipio              ano         populacao        populacao_masculina
+##  Length:3225        Min.   :2014   Min.   :     808   Min.   :    422    
+##  Class :character   1st Qu.:2015   1st Qu.:    5402   1st Qu.:   2751    
+##  Mode  :character   Median :2016   Median :   13013   Median :   6684    
+##                     Mean   :2016   Mean   :   67208   Mean   :  32707    
+##                     3rd Qu.:2017   3rd Qu.:   39896   3rd Qu.:  19712    
+##                     Max.   :2018   Max.   :11753659   Max.   :5590397    
+##                                                                          
+##  populacao_feminina razao_de_sexos   populacao_urbana   populacao_rural   
+##  Min.   :    385    Min.   : 84.88   Min.   :     629   Length:3225       
+##  1st Qu.:   2614    1st Qu.: 97.20   1st Qu.:    4218   Class :character  
+##  Median :   6408    Median : 99.77   Median :   10937   Mode  :character  
+##  Mean   :  34502    Mean   :102.04   Mean   :   64735                     
+##  3rd Qu.:  20291    3rd Qu.:102.93   3rd Qu.:   36897                     
+##  Max.   :6163262    Max.   :415.80   Max.   :11648004                     
+##                                                                           
+##  grau_urbanizacao_porcentagem  codigo_ibge     
+##  Min.   : 25.71               Min.   :3500105  
+##  1st Qu.: 81.35               1st Qu.:3514576  
+##  Median : 90.46               Median :3528650  
+##  Mean   : 85.99               Mean   :3528695  
+##  3rd Qu.: 95.60               3rd Qu.:3543212  
+##  Max.   :100.00               Max.   :3557303  
+##                               NA's   :5
+```
+
+---
+
+#Left Join - Emplasa
+
+```r
+# Cria a tabela e faz o left join baseado no código IBGE
+seade_mmp_emplasa &lt;- left_join(mmp_emplasa2, seade_imp, by="codigo_ibge")
+# A coluna de município está repetida, então apago uma delas. 
+seade_mmp_emplasa$municipio.y &lt;- NULL
+```
+
+
+```r
+write_csv(seade_mmp_emplasa,path = "dados/seade_mmp_emplasa.csv")
+```
+
+---
+class: center, middle
+# Estudo de caso Parte 2 - Municípios da Macrometrópole Paulista
+
+
+**Objetivos:** Explorar os dados referentes à Macrometrópole Paulista.
+
+---
+# Estudo de caso
+
+
+
+
+
+```r
+pop_mmp &lt;- seade_mmp_emplasa %&gt;% 
+group_by(ano) %&gt;%
+  summarise(PopulacaoTotal = sum(populacao)) %&gt;% 
+  mutate(PopulacaoTotal = PopulacaoTotal/1000000)  #transformar em milhões 
+
+pop_mmp &lt;- round(pop_mmp, 2)
+
+
+# Segundo os dados da SEADE, atualmente (em 2018) a MMP tem  `r pop_mmp[5,2]` milhões de habitantes.
+```
+
+Segundo os dados da SEADE, atualmente (em 2018) a MMP tem  32.88 milhões de habitantes.
+
+
+
+---
+
+População na MMP em 2018, por RM/AU, segundo os dados da SEADE:
+
+
+```r
+seade_mmp_emplasa %&gt;% 
+  mutate(populacao = populacao/1000000) %&gt;%  #transformar em milhões
+  filter(ano =="2018") %&gt;% 
+  group_by(rm_au) %&gt;% summarise(PopulacaoTotal = sum(populacao)) %&gt;% 
+arrange (desc(PopulacaoTotal)) %&gt;%
+  ggplot()+
+  geom_col(aes(x = reorder( rm_au ,-PopulacaoTotal), y = PopulacaoTotal, fill=rm_au))+
+   labs(
+  x = "Região Metropolitana/Aglomeração Urbana", 
+  y = "População",
+  fill = "Região Metropolitana/Aglomeração Urbana",
+  title = "População na Macrometrópole Paulista em 2018"
+)+
+  theme_bw()+
+ theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+```
+
+---
+
+
+População na MMP em 2018, por RM/AU, segundo os dados da SEADE:
+
+&lt;img src="index_files/figure-html/unnamed-chunk-44-1.png" style="display: block; margin: auto;" /&gt;
+---
+class: center, middle
+# Conclusão
+
+---
+# Materiais de estudo/Referências
+
+
+- [R Cookbook - Statistical analysis](http://www.cookbook-r.com/Statistical_analysis/) - Regression and correlation, t-test, Frequency tests, ANOVA,     Logistic regression,    Homogeneity of variance,     Inter-rater reliability.
+
+- [R Cookbook - Graphs](http://www.cookbook-r.com/Graphs/)
+
+---
+# Materiais de estudo/Referências
+
+
+- [R for Data Science](https://r4ds.had.co.nz/) - Livro em inglês, disponibilizado gratuitamente online. Conteúdo muito bom sobre R.
+
+- [Curso-R](http://curso-r.com/) - Cursos presenciais sobre R.
+
+- [Material Curso-R](http://material.curso-r.com/) - Material disponibilizado pela Curso-R para estudo.
+
+- [Blog Curso-R](https://www.curso-r.com/blog/) - Blog do Curso-R com diversos conteúdos interessantes.
+
+
+# Links interessantes
+* [Dados de execução orçamentária da PMSP](https://beatrizmilz.github.io/DadosExecucaoOrcamentariaPMSP/index.html)
+
+* [Rpollution](https://www.rpollution.com/) - Blog onde é publicado análise de dados sobre poluição do ar;
+---
+class: center, middle
+
+
+# Obrigada!
+Apresentação elaborada com [Xaringan](https://github.com/yihui/xaringan)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

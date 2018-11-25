@@ -1,0 +1,2 @@
+"0","#Transformar a coluna do código IBGE em número"
+"0","divisao_adm$codigo_ibge <- as.integer(divisao_adm$codigo_ibge) "
