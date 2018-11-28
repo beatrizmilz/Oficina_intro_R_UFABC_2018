@@ -4,6 +4,11 @@
     <title>Oficina de Introdução ao Software R</title>
     <meta charset="utf-8">
     <meta name="author" content="Beatriz Milz" />
+    <script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+    <link href="libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet" />
+    <script src="libs/wordcloud2-0.0.1/wordcloud2-all.js"></script>
+    <script src="libs/wordcloud2-0.0.1/hover.js"></script>
+    <script src="libs/wordcloud2-binding-0.2.1/wordcloud2.js"></script>
     <link rel="stylesheet" href="css/default.css" type="text/css" />
     <link rel="stylesheet" href="css/mmp.css" type="text/css" />
     <link rel="stylesheet" href="css/mmp-fonts.css" type="text/css" />
@@ -24,7 +29,7 @@ class: center, middle, inverse, title-slide
 
 # Instrutora
 
-* Beatriz Milz
+* **Beatriz Milz**
   - Bacharel em Gestão Ambiental (EACH/USP).
   - Mestre em Ciências no PPG-Análise Ambiental Integrada (UNIFESP/Diadema).
   - Atualmente no processo seletivo de Doutorado em Ciência Ambiental no PROCAM/IEE/USP.
@@ -33,24 +38,34 @@ class: center, middle, inverse, title-slide
   - Github:&lt;a href="http://github.com/beatrizmilz"&gt;&lt;i class="fab fa-github"&gt;&lt;/i&gt;&amp;nbsp; @beatrizmilz&lt;/a&gt; (repositório de código)&lt;br&gt;
 
 ---
-# Monitoras
+# Organizadora e Monitora
 
-* Rosana Laura da Silva 
+* **Rosana Laura da Silva **
   - Mestranda em Planejamento e Gestão do Território - UFABC
   - Bacharel em Ciência e Tecnologia - UFABC
   - Bacharel em Engenharia Ambiental e Urbana - UFABC
   - LAPLAN - Laboratório de Planejamento e Gestão do Território
   - MACROAMB - Projeto Temático FAPESP: Governança Ambiental da Macrometrópole Paulista faca à variabilidade climática.
+    - Email:&lt;a href="mailto:laura.ufabc@gmail.com"&gt;&lt;i class="fas fa-envelope-square"&gt;&lt;/i&gt;&amp;nbsp;laura.ufabc@gmail.com&lt;/a&gt;&lt;br&gt;
+    
+---
+# Organizadora e Monitora
 
-* Bruna de Souza Fernandes
+* **Bruna de Souza Fernandes**
   - Cursando Bacharel em Ciência e Humanidades - UFABC
   - Cursando Bacharel em Planejamento Territorial - UFABC
   - LAPLAN - Laboratório de Planejamento e Gestão do Território
   - MACROAMB - Projeto Temático FAPESP: Governança Ambiental da Macrometrópole Paulista faca à variabilidade climática.
+  - Email:&lt;a href="mailto:bsfernandes17@gmail.com"&gt;&lt;i class="fas fa-envelope-square"&gt;&lt;/i&gt;&amp;nbsp;bsfernandes17@gmail.com&lt;/a&gt;&lt;br&gt;
+  
+---
+# Monitora
 
-* Alissa Munerato
-  - R-Ladies São Paulo
-
+* **Alissa Munerato**
+  - Co-organizadora do Meetup [R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/).
+  - Cursando Bacharelado em Ciência e Tecnologia - UFABC
+  - Cursando Bacharelado em Neurociência - UFABC
+  - Email:&lt;a href="mailto:alissamunerato@gmail.com"&gt;&lt;i class="fas fa-envelope-square"&gt;&lt;/i&gt;&amp;nbsp; alissamunerato@gmail.com&lt;/a&gt;&lt;br&gt;
 
 
 ---
@@ -103,7 +118,7 @@ Fonte: [CRAN Task View: Reproducible Research](https://cran.r-project.org/view=R
 
 * Visualização de dados
 
-* Apresentações
+* Apresentações - Pacote Xaringan - [Material: Comunicando seus resultados e criando apresentações com R](https://beatrizmilz.github.io/apresentacao_RLadies_xaringan)
 
 * Relatórios dinâmicos
 
@@ -112,8 +127,68 @@ Fonte: [CRAN Task View: Reproducible Research](https://cran.r-project.org/view=R
 * Mineração de dados
 
 * Muito mais ...
+---
+
+**Exemplo: Gráfico elaborado com R - Proposta Orçamentária PMSP 2019 - 10 maiores orçamentos** 
+
+&lt;img src="https://beatrizmilz.github.io/DadosExecucaoOrcamentariaPMSP/proposta2019_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /&gt;
+Fonte: [Explorando o orçamento da Prefeitura Municipal de São Paulo](https://beatrizmilz.github.io/DadosExecucaoOrcamentariaPMSP/proposta2019.html)
+
 
 ---
+
+**Exemplo: Gráfico elaborado com R - Execução Orçamentária PMSP na função Gestão Ambiental** 
+
+&lt;img src="https://beatrizmilz.github.io/DadosExecucaoOrcamentariaPMSP/gestaoambiental_files/figure-html/unnamed-chunk-5-1.png" width="90%" style="display: block; margin: auto;" /&gt;
+Fonte: [Explorando o orçamento da Prefeitura Municipal de São Paulo](https://beatrizmilz.github.io/DadosExecucaoOrcamentariaPMSP/gestaoambiental.html)
+
+
+---
+
+**Exemplo: Gráfico elaborado com R - Material Particulado 10 - Dados CETESB - RPollution;** 
+
+&lt;img src="https://www.rpollution.com/blog/pm-em-sp_files/figure-html/unnamed-chunk-6-1.png" width="90%" style="display: block; margin: auto;" /&gt;
+Fonte: [Rpollution](https://www.rpollution.com/)
+
+---
+
+**Exemplo: Frequencia de Palavras - TESE Doutorado PROCAM/USP Ana Lucia Spinola;** 
+
+&lt;img src="imagens/ana-lu-freq.png" width="90%" style="display: block; margin: auto;" /&gt;
+Fonte: [Ana Lu Spinola](https://analuspi.github.io/Text-Mining/)
+---
+
+**Exemplo: BIGRAM - TESE Doutorado PROCAM/USP Ana Lucia Spinola;** 
+
+&lt;img src="imagens/bigram-ana-lu.png" width="90%" style="display: block; margin: auto;" /&gt;
+Fonte: [Ana Lu Spinola](https://analuspi.github.io/Text-Mining/)
+
+
+---
+**Exemplo: Nuvem de palavras**
+
+
+
+
+
+
+
+
+
+&lt;center&gt;
+<div id="htmlwidget-f6f4747d7297a9eac7f4" style="width:504px;height:504px;" class="wordcloud2 html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f6f4747d7297a9eac7f4">{"x":{"word":["water","environmental","management","governance","development","rural","local","social","study","vulnerability","challenges","areas","brazil","brazilian","public","rights","change","climate","conflicts","paulo","natural","strategies","ambiente","sociedade","rio","metropolitan","brasil","ambientais","gestão","áreas","conservação","perspectiva","caso","ambiental","conflitos","análise","amazônia","brasileira","políticas","desenvolvimento","sustentabilidade","avaliação","estudo","riscos","uso","governança","hídricos","nacional","recursos","educação","socioambientais","mudanças","land","contexto","desastres","risco","água","saúde","sustentável","construção","política","sociais","meio","participação","desafios","ecologia","natureza","questão"],"freq":[30,58,15,11,8,20,15,38,9,8,8,11,33,19,11,9,15,15,9,18,12,8,30,10,16,8,52,22,28,15,20,9,22,71,16,21,14,13,12,29,29,8,16,10,10,13,9,9,18,8,8,11,9,8,8,11,12,13,19,10,22,12,14,8,10,14,11,9],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":1.26760563380282,"backgroundColor":"white","gridSize":0,"minRotation":-0.785398163397448,"maxRotation":0.785398163397448,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
+&lt;/center&gt;
+
+
+---
+# Exemplo de dashboard
+
+- Polling Data - http://pollingdata.com.br/ - pesquisas eleitorais
+- Dashboard em Shiny - R
+
+---
+
 ## RStudio
 
 **RStudio** é o IDE da Linguagem R, ou seja, o ambiente que utilizamos para editar e executar os códigos em R.
@@ -130,14 +205,7 @@ Fonte: [CRAN Task View: Reproducible Research](https://cran.r-project.org/view=R
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
----
-## RStudio
-&lt;img src="imagens/01-rstudio.png" width="100%" style="display: block; margin: auto;" /&gt;
-Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
----
-## RStudio
-&lt;img src="imagens/01-rstudio-script.png" width="100%" style="display: block; margin: auto;" /&gt;
-Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
+
 ---
 ## Projetos
 
@@ -147,19 +215,6 @@ Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio
 &gt; *"Um bom layout de projeto facilitará sua vida: ajudará a garantir a integridade de seus dados; facilita o compartilhamento de seu código com outra pessoa (colega de laboratório, colaborador ou orientador); ele permite que você facilmente faça o upload do seu código com a submissão do seu manuscrito; torna-se mais fácil recuperar o projeto depois de um intervalo. "*
 
 Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html)
-
----
-## Criando um projeto
-
-1. Clique na opção **“File”** do menu, e então em **“New Project”**.
-
-1.  Clique em **“New Directory”**.
-
-1.  Clique em **“New Project”**.
-
-1.  Escreva o nome do diretório (pasta) onde deseja manter seu projeto, ex “my_project”.
-
-1.  Clique no botão **“Create Project”**.
 
 ---
 ## Boas práticas para organizar seu projeto
@@ -220,6 +275,58 @@ Porque é interessante?
 
 &lt;img src="imagens/New_R_Markdown.png" width="50%" style="display: block; margin: auto;" /&gt;
 ---
+# yaml - metadados do documento:
+
+- Controla muitas das configurações do documento.
+
+
+```r
+---
+title: "Untitled"
+author: "Beatriz MIlz"
+date: "27 de novembro de 2018"
+output: html_document
+---
+```
+
+
+- title: título
+- subtitle: subtítulo
+- author: autor
+- date: data
+- output: formato (Ex: html_document, pdf_document, etc).
+- Cuidado com a **identação**
+
+
+Leia também: [Output Formats - R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/output-formats.html)
+
+---
+##Adicionando campos de código - chunks
+
+&lt;img src="imagens/8.PNG" width="20%" style="display: block; margin: auto;" /&gt;
+- Aceita código em R, Python, SQL.
+
+- O que for código -&gt; Colocar dentro de um campo de código (chunk).
+- O que for texto (também aceita markdown, html, css, javascript) -&gt; Colocar fora do campo de código (chunk).
+
+- Para colocar comentários dentro do chunk, usar o **#**. Ex:
+
+```r
+# Se colocar um hashtag no inicio da linha, o que estiver a seguir nao será considerado como código.
+```
+
+
+Dica: Atalho para criar chunk: `Ctrl + ALt + I`.
+---
+## RStudio
+&lt;img src="imagens/01-rstudio.png" width="100%" style="display: block; margin: auto;" /&gt;
+Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
+---
+## RStudio
+&lt;img src="imagens/01-rstudio-script.png" width="100%" style="display: block; margin: auto;" /&gt;
+Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
+
+---
 ## Pacotes no R
 
 **Pacotes** são coleções de funções, dados e documentação que estendem as capacidades do R básico.
@@ -277,6 +384,17 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
+
+
+---
+
+# Pacotes - CRAN Task View
+
+- [CRAN Task View](https://cran.r-project.org/web/views/)
+
+- [CRAN Task View: Analysis of Ecological and Environmental Data](https://cran.r-project.org/web/views/Environmetrics.html) - Ex: Hydrology and Oceanography, Climatology, etc.
+
+- [CRAN Task View: Analysis of Spatial Data](https://cran.r-project.org/web/views/Spatial.html) - Ex: Ecological analysis, Geostatistics, etc.
 ---
 
 ## Help!
@@ -289,7 +407,7 @@ help(sum)
 ?sum
 ```
 
-- Se a dúvida permanecer, procure no Stack OverFlow, Google.
+- Se a dúvida permanecer, procure no [Stack OverFlow](https://pt.stackoverflow.com/), Google.
   - E se ainda tiver dúvidas, pergunte para a comunidade (há grupos no Telegram e outras redes sociais).
   
   
@@ -325,20 +443,6 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 - **List**: tipo especial de vetor que aceita elementos de classes diferentes. &lt;br&gt;&lt;/br&gt;
 - **Data.frame**: são tabelas de dados com linhas e colunas, como uma tabela do Excel. Como são listas, essas colunas podem ser de classes diferentes.
 
-
-
-
-Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
----
-
-## Atalhos importantes
-
-Os atalhos facilitam. Veja os principais:&lt;br&gt;&lt;/br&gt;
-
-- CTRL + ENTER: roda a linha selecionada no script.&lt;br&gt;&lt;/br&gt;
-- ALT + **-**: (&lt;-) sinal de atribuição.&lt;br&gt;&lt;/br&gt;
-- CTRL + SHIFT + M: (%&gt;%) operador pipe.&lt;br&gt;&lt;/br&gt;
-- CTRL + ALT + I: cria um chunk do RMarkdown.
 
 
 
@@ -449,17 +553,7 @@ exp(0.5) # e^(1/2)
 ```
 
 Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
----
 
-##Nomes de objetos e variáveis
-
-- Os nomes devem começar com uma letra. Podem conter letras, números, _ e .&lt;br&gt;&lt;/br&gt;
-- Recomendação do autor do livro R For Data Science: **usar_snake_case**, ou seja, palavras escritas em minúsculo separadas pelo underscore (_).&lt;br&gt;&lt;/br&gt;
-- O R é *case sensitive*, isto é, faz a diferenciação entre as letras minúsculas e maiúsculas. Portanto, um objeto chamado *teste* é diferente de um outro objeto chamado *Teste*.
-
-
-
-Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 ---
 
@@ -473,15 +567,25 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+---
 
+##Nomes de objetos e variáveis
+
+- Os nomes devem começar com uma letra. Podem conter letras, números, _ e .&lt;br&gt;&lt;/br&gt;
+- Recomendação do autor do livro R For Data Science: **usar_snake_case**, ou seja, palavras escritas em minúsculo separadas pelo underscore (_).&lt;br&gt;&lt;/br&gt;
+- O R é *case sensitive*, isto é, faz a diferenciação entre as letras minúsculas e maiúsculas. Portanto, um objeto chamado *teste* é diferente de um outro objeto chamado *Teste*.
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 ---
 
 ## Exemplos de objetos e atribuição de valores
 
 
 ```r
-nome_empregado &lt;- "Tom Cruise de Souza e Silva"
-nome_empregado
+nome_estudante &lt;- "Tom Cruise de Souza e Silva"
+nome_estudante
 ```
 
 ```
@@ -489,8 +593,8 @@ nome_empregado
 ```
 
 ```r
-horas_trabalhadas &lt;- 160
-horas_trabalhadas
+horas_pesquisa &lt;- 160
+horas_pesquisa
 ```
 
 ```
@@ -498,12 +602,12 @@ horas_trabalhadas
 ```
 
 ```r
-salario &lt;- 3984.23
-salario
+bolsa &lt;- 1500.00
+bolsa
 ```
 
 ```
-## [1] 3984.23
+## [1] 1500
 ```
 
 ```r
@@ -517,7 +621,7 @@ ativo
 
 
 
-Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+Fonte: Modificado de [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 
 
@@ -537,6 +641,73 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
+---
+## Exemplos
+
+
+```r
+bolsa_fapesp_mestrado &lt;-2043
+bolsa_capes_mestrado &lt;- 1500
+
+bolsa_capes_mestrado == bolsa_fapesp_mestrado
+```
+
+```
+## [1] FALSE
+```
+
+```r
+bolsa_capes_mestrado &gt;= bolsa_fapesp_mestrado
+```
+
+```
+## [1] FALSE
+```
+
+```r
+bolsa_capes_mestrado &lt;= bolsa_fapesp_mestrado
+```
+
+```
+## [1] TRUE
+```
+---
+## Exemplos
+
+- Comparação com vetores
+
+```r
+bolsas_fapesp &lt;- c(695.70, 2043,  3010.80, 7373.10) 
+
+bolsas_fapesp &gt;= bolsa_capes_mestrado
+```
+
+```
+## [1] FALSE  TRUE  TRUE  TRUE
+```
+---
+## Exemplos
+- Operações com vetores
+
+```r
+aluguel_kitnet_barata &lt;- 806
+aluguel_kitnet_cara &lt;- 1743
+
+bolsas_fapesp - aluguel_kitnet_barata
+```
+
+```
+## [1] -110.3 1237.0 2204.8 6567.1
+```
+
+```r
+bolsas_fapesp - aluguel_kitnet_cara
+```
+
+```
+## [1] -1047.3   300.0  1267.8  5630.1
+```
+Fonte dos valores: http://www.custodevida.com.br/sp/sao-paulo/
 ---
 
 ## Operadores Lógicos
@@ -617,8 +788,6 @@ NA == NA
 
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
-
-
 ---
 
 ## O Tidyverse
@@ -676,9 +845,34 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 ---
 ## Importar arquivos:
-RStudio -&gt; Environment -&gt; Import Dataset 
+- Via **código (próximo slide)**, ou via **"Import Dataset"**
+- RStudio -&gt; Environment -&gt; **Import Dataset **
+  - From Excel -&gt; arquivos xls
+  - From text (readr) -&gt; csv
+  - File/URL - Colocar o link da tabela (se estiver online), ou colocar o caminho da tabela no seu projeto
+  - Update - Se selecionar URL, após colar a URL clique em UPDATE. O R irá procurar essa tabela, e caso encontre, apresentará uma "amostra" da sua tabela. 
+  - **SEMPRE copie o Code Preview**, e guarde no seu código para que você tenha o registro das etapas realizadas (lembre-se da reprodutibilidade).
+  
 
-(Estou escrevendo esse slide)
+---
+## Importar arquivos:
+- Exercício: importar a planilha de proposta de orçamento de 2019 da Prefeitura Municipal de São Paulo: [Site](http://orcamento.sf.prefeitura.sp.gov.br/orcamento/proposta.php) e [Link para a tabela](http://orcamento.sf.prefeitura.sp.gov.br/orcamento/uploads/2019/BaseDados.xls).
+
+&lt;img src="imagens/import.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+# Code preview
+
+```r
+library(readxl)
+url &lt;- "http://orcamento.sf.prefeitura.sp.gov.br/orcamento/uploads/2019/BaseDados.xls"
+destfile &lt;- "proposta_pmsp_2019.xls"
+curl::curl_download(url, destfile)
+proposta_pmsp_2019 &lt;- read_excel(destfile)
+View(proposta_pmsp_2019)
+```
+
 ---
 
 ### View e Summary
@@ -689,37 +883,114 @@ RStudio -&gt; Environment -&gt; Import Dataset
 
 
 ```r
-summary(mtcars)
+summary(proposta_pmsp_2019)
 ```
 
 ```
-##       mpg             cyl             disp             hp       
-##  Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  
-##  1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  
-##  Median :19.20   Median :6.000   Median :196.3   Median :123.0  
-##  Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  
-##  3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  
-##  Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  
-##       drat             wt             qsec             vs        
-##  Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  
-##  1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  
-##  Median :3.695   Median :3.325   Median :17.71   Median :0.0000  
-##  Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  
-##  3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  
-##  Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  
-##        am              gear            carb      
-##  Min.   :0.0000   Min.   :3.000   Min.   :1.000  
-##  1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  
-##  Median :0.0000   Median :4.000   Median :2.000  
-##  Mean   :0.4062   Mean   :3.688   Mean   :2.812  
-##  3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
-##  Max.   :1.0000   Max.   :5.000   Max.   :8.000
+##     DOTAÇÃO       EXERCICIO_EMPRESA   EXERCICIO    ADMINISTRACAO     
+##  Min.   :127823   Min.   :448.0     Min.   :2019   Length:4207       
+##  1st Qu.:129074   1st Qu.:448.0     1st Qu.:2019   Class :character  
+##  Median :130475   Median :448.0     Median :2019   Mode  :character  
+##  Mean   :130475   Mean   :449.5     Mean   :2019                     
+##  3rd Qu.:131854   3rd Qu.:448.0     3rd Qu.:2019                     
+##  Max.   :133265   Max.   :484.0     Max.   :2019                     
+##      ORGAO        DESC_ORGAO           UNIDADE      DESC_UNIDADE      
+##  Min.   : 1.00   Length:4207        Min.   :10.00   Length:4207       
+##  1st Qu.:16.00   Class :character   1st Qu.:10.00   Class :character  
+##  Median :37.00   Mode  :character   Median :10.00   Mode  :character  
+##  Mean   :43.93                      Mean   :12.88                     
+##  3rd Qu.:70.00                      3rd Qu.:11.00                     
+##  Max.   :99.00                      Max.   :60.00                     
+##      FUNCAO      DESC_FUNCAO          SUBFUNCAO     DESC_SUBFUNCAO    
+##  Min.   : 1.00   Length:4207        Min.   : 31.0   Length:4207       
+##  1st Qu.:10.00   Class :character   1st Qu.:122.0   Class :character  
+##  Median :12.00   Mode  :character   Median :301.0   Mode  :character  
+##  Mean   :12.31                      Mean   :288.2                     
+##  3rd Qu.:15.00                      3rd Qu.:392.0                     
+##  Max.   :99.00                      Max.   :999.0                     
+##     PROGRAMA    DESC_PROGRAMA          PAPA             PROJ_ATIV   
+##  Min.   :   0   Length:4207        Length:4207        Min.   :   4  
+##  1st Qu.:3009   Class :character   Class :character   1st Qu.:2100  
+##  Median :3012   Mode  :character   Mode  :character   Median :2803  
+##  Mean   :2992                                         Mean   :3216  
+##  3rd Qu.:3024                                         3rd Qu.:3742  
+##  Max.   :9999                                         Max.   :9205  
+##  DESC_PROJ_ATIV      CTA_DESPESA       DESC_CTA_DESPESA       FONTE       
+##  Length:4207        Min.   :31900100   Length:4207        Min.   : 0.000  
+##  Class :character   1st Qu.:33903000   Class :character   1st Qu.: 0.000  
+##  Mode  :character   Median :33903900   Mode  :character   Median : 0.000  
+##                     Mean   :37336696                      Mean   : 1.298  
+##                     3rd Qu.:44903900                      3rd Qu.: 0.000  
+##                     Max.   :99999999                      Max.   :11.000  
+##   DESC_FONTE        COD_NRO_EMND_DOTA   SALDO_ORÇ          AGENDA       
+##  Length:4207        Mode:logical      Min.   :1.000e+03   Mode:logical  
+##  Class :character   NA's:4207         1st Qu.:8.480e+03   NA's:4207     
+##  Mode  :character                     Median :1.437e+05                 
+##                                       Mean   :1.429e+07                 
+##                                       3rd Qu.:1.695e+06                 
+##                                       Max.   :6.076e+09                 
+##  DESC_AGENDA      EIXO         DESC_EIXO          PPA           
+##  Mode:logical   Mode:logical   Mode:logical   Length:4207       
+##  NA's:4207      NA's:4207      NA's:4207      Class :character  
+##                                               Mode  :character  
+##                                                                 
+##                                                                 
+## 
 ```
 
 
 Fonte: Editado - [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 
+---
+Soma:
+
+
+```r
+sum(proposta_pmsp_2019$SALDO_ORÇ) #soma do orçamento (em reais)
+```
+
+```
+## [1] 60137660056
+```
+
+```r
+sum(proposta_pmsp_2019$SALDO_ORÇ) / 10^9 #transformar em bilhões
+```
+
+```
+## [1] 60.13766
+```
+
+Média
+
+
+```r
+mean(proposta_pmsp_2019$SALDO_ORÇ)
+```
+
+```
+## [1] 14294666
+```
+
+Desvio Padrão
+
+```r
+sd(proposta_pmsp_2019$SALDO_ORÇ)
+```
+
+```
+## [1] 144843747
+```
+---
+
+```r
+# Boxplot of MPG by Car Cylinders
+boxplot(mpg~cyl,data=mtcars, main="Car Milage Data",
+   xlab="Number of Cylinders", ylab="Miles Per Gallon") 
+```
+
+&lt;img src="index_files/figure-html/unnamed-chunk-44-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ## O operador %&gt;%, o Pipe
@@ -782,6 +1053,24 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 - **group_by**(): agrupa colunas
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+##Exemplo dplyr
+
+
+```r
+proposta_pmsp_2019_ga &lt;- proposta_pmsp_2019 %&gt;% 
+  filter(DESC_FUNCAO == "Gestão Ambiental")
+```
+---
+##Exemplo dplyr
+
+```r
+proposta_pmsp_2019_ga2 &lt;-proposta_pmsp_2019 %&gt;% 
+  filter(DESC_FUNCAO == "Gestão Ambiental")%&gt;% 
+  arrange(desc(SALDO_ORÇ))
+```
+
 ---
 # ggplot2 
 
@@ -795,6 +1084,20 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 &lt;img src="imagens/ggplot2.png" style="display: block; margin: auto;" /&gt;
 
+---
+
+## Atalhos importantes
+
+Os atalhos facilitam. Veja os principais:&lt;br&gt;&lt;/br&gt;
+
+- CTRL + ENTER: roda a linha selecionada no script.&lt;br&gt;&lt;/br&gt;
+- ALT + **-**: (&lt;-) sinal de atribuição.&lt;br&gt;&lt;/br&gt;
+- CTRL + SHIFT + M: (%&gt;%) operador pipe.&lt;br&gt;&lt;/br&gt;
+- CTRL + ALT + I: cria um chunk do RMarkdown.
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 
 ---
@@ -844,7 +1147,7 @@ library(tidyverse)
 ---
 # Estudo de caso
 
-Fonte: Tabela elaborada pelo LAPLAM - UFABC
+Fonte: Tabela elaborada pelo LAPLAN - UFABC
 Atualizado em outubro/2018
 
 
@@ -1095,7 +1398,7 @@ class: center, middle
 **Objetivos:** Explorar os dados referentes à Macrometrópole Paulista.
 
 ---
-# Estudo de caso
+# Estudo de caso - Utilidade com relatórios dinâmicos
 
 
 
@@ -1147,7 +1450,7 @@ arrange (desc(PopulacaoTotal)) %&gt;%
 
 População na MMP em 2018, por RM/AU, segundo os dados da SEADE:
 
-&lt;img src="index_files/figure-html/unnamed-chunk-44-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-69-1.png" style="display: block; margin: auto;" /&gt;
 ---
 class: center, middle
 # Conclusão
@@ -1157,6 +1460,8 @@ class: center, middle
 [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 [R for Reproducible Scientific Analysis - SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/)
+
+(mais referências nos próximos slides)
 ---
 # Onde estudar mais?
 - [Repositório de materias de estudo com R](https://github.com/beatrizmilz/materiais_estudo_R)

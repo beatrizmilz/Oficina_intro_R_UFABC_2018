@@ -1,0 +1,35 @@
+---
+title: "Untitled"
+author: "Beatriz MIlz"
+date: "28 de novembro de 2018"
+output: html_document
+---
+
+---
+# Exercícios
+- ** Criando variáveis **
+```{r}
+centro_logistico_ha_total <- 468
+centro_logistico_ha_total
+```
+
+```{r}
+centro_logistico_ha_desmatado <- 96
+centro_logistico_ha_desmatado
+```
+
+Fonte: http://www.campograndelog.com.br/projeto.php
+
+---
+# Exercícios
+- ** Operações matemáticas **
+```{r}
+centro_logistico_km2_total <- centro_logistico_ha_total / 100
+centro_logistico_km2_total
+```
+
+```{r}
+centro_logistico_km2_desmatado <- centro_logistico_ha_desmatado / 100
+centro_logistico_km2_desmatado
+```
+---

@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
 
 # Instrutora
 
-* Beatriz Milz
+* **Beatriz Milz**
   - Bacharel em Gestão Ambiental (EACH/USP).
   - Mestre em Ciências no PPG-Análise Ambiental Integrada (UNIFESP/Diadema).
   - Atualmente no processo seletivo de Doutorado em Ciência Ambiental no PROCAM/IEE/USP.
@@ -30,24 +30,34 @@ knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
   - Github:<a href="http://github.com/beatrizmilz"><i class="fab fa-github"></i>&nbsp; @beatrizmilz</a> (repositório de código)<br>
 
 ---
-# Monitoras
+# Organizadora e Monitora
 
-* Rosana Laura da Silva 
+* **Rosana Laura da Silva **
   - Mestranda em Planejamento e Gestão do Território - UFABC
   - Bacharel em Ciência e Tecnologia - UFABC
   - Bacharel em Engenharia Ambiental e Urbana - UFABC
   - LAPLAN - Laboratório de Planejamento e Gestão do Território
   - MACROAMB - Projeto Temático FAPESP: Governança Ambiental da Macrometrópole Paulista faca à variabilidade climática.
+    - Email:<a href="mailto:laura.ufabc@gmail.com"><i class="fas fa-envelope-square"></i>&nbsp;laura.ufabc@gmail.com</a><br>
+    
+---
+# Organizadora e Monitora
 
-* Bruna de Souza Fernandes
+* **Bruna de Souza Fernandes**
   - Cursando Bacharel em Ciência e Humanidades - UFABC
   - Cursando Bacharel em Planejamento Territorial - UFABC
   - LAPLAN - Laboratório de Planejamento e Gestão do Território
   - MACROAMB - Projeto Temático FAPESP: Governança Ambiental da Macrometrópole Paulista faca à variabilidade climática.
+  - Email:<a href="mailto:bsfernandes17@gmail.com"><i class="fas fa-envelope-square"></i>&nbsp;bsfernandes17@gmail.com</a><br>
+  
+---
+# Monitora
 
-* Alissa Munerato
-  - R-Ladies São Paulo
-
+* **Alissa Munerato**
+  - Co-organizadora do Meetup [R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/).
+  - Cursando Bacharelado em Ciência e Tecnologia - UFABC
+  - Cursando Bacharelado em Neurociência - UFABC
+  - Email:<a href="mailto:alissamunerato@gmail.com"><i class="fas fa-envelope-square"></i>&nbsp; alissamunerato@gmail.com</a><br>
 
 
 ---
@@ -104,7 +114,7 @@ Fonte: [CRAN Task View: Reproducible Research](https://cran.r-project.org/view=R
 
 * Visualização de dados
 
-* Apresentações
+* Apresentações - Pacote Xaringan - [Material: Comunicando seus resultados e criando apresentações com R](https://beatrizmilz.github.io/apresentacao_RLadies_xaringan)
 
 * Relatórios dinâmicos
 
@@ -113,8 +123,111 @@ Fonte: [CRAN Task View: Reproducible Research](https://cran.r-project.org/view=R
 * Mineração de dados
 
 * Muito mais ...
+---
+
+**Exemplo: Gráfico elaborado com R - Proposta Orçamentária PMSP 2019 - 10 maiores orçamentos** 
+
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("https://beatrizmilz.github.io/DadosExecucaoOrcamentariaPMSP/proposta2019_files/figure-html/unnamed-chunk-5-1.png") 
+```
+Fonte: [Explorando o orçamento da Prefeitura Municipal de São Paulo](https://beatrizmilz.github.io/DadosExecucaoOrcamentariaPMSP/proposta2019.html)
+
 
 ---
+
+**Exemplo: Gráfico elaborado com R - Execução Orçamentária PMSP na função Gestão Ambiental** 
+
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("https://beatrizmilz.github.io/DadosExecucaoOrcamentariaPMSP/gestaoambiental_files/figure-html/unnamed-chunk-5-1.png") 
+```
+Fonte: [Explorando o orçamento da Prefeitura Municipal de São Paulo](https://beatrizmilz.github.io/DadosExecucaoOrcamentariaPMSP/gestaoambiental.html)
+
+
+---
+
+**Exemplo: Gráfico elaborado com R - Material Particulado 10 - Dados CETESB - RPollution;** 
+
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("https://www.rpollution.com/blog/pm-em-sp_files/figure-html/unnamed-chunk-6-1.png") 
+```
+Fonte: [Rpollution](https://www.rpollution.com/)
+
+---
+
+**Exemplo: Frequencia de Palavras - TESE Doutorado PROCAM/USP Ana Lucia Spinola;** 
+
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("imagens/ana-lu-freq.png") 
+```
+Fonte: [Ana Lu Spinola](https://analuspi.github.io/Text-Mining/)
+---
+
+**Exemplo: BIGRAM - TESE Doutorado PROCAM/USP Ana Lucia Spinola;** 
+
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("imagens/bigram-ana-lu.png") 
+```
+Fonte: [Ana Lu Spinola](https://analuspi.github.io/Text-Mining/)
+
+
+---
+**Exemplo: Nuvem de palavras**
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+library(data.table)
+library(bit64)
+library(magrittr)
+library(tm)
+library(wordcloud)
+library(wordcloud2)
+library(tidyverse)
+
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+dados<- fread('dados/export_scielo_ambienteesociedade.csv', encoding="UTF-8") 
+  names(dados) <- c('id', 'title', 'authors', 'source', 'journal', 'language', 'publicationyear','url') 
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+ dados <- dados %>% 
+as.data.frame(., stringsAsFactors=F) %>% .[-2,]
+#View(dados)
+
+pal2 = brewer.pal(8,'Dark2')
+
+dadosinglesword <- dados[,2] %>% tolower %>% 
+  removePunctuation %>% removeWords(., stopwords('pt')) %>% 
+    removeWords(., stopwords('en')) %>%   removeWords(., stopwords('es')) %>%  removeWords(c("errata", "editorial", "apresentação", "sobre"))
+#View(dadosinglesword)
+```
+
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+corpus <- Corpus(VectorSource(enc2native(dadosinglesword)))
+#corpus
+#preparando o df para wordcloud2
+tdm.word <- TermDocumentMatrix(corpus) %>% as.matrix
+#tdm.word 
+tdm.df <- data.frame(words = rownames(tdm.word),
+                    freq = apply(tdm.word,1,sum)) %>% filter(freq>7)
+
+```
+<center>
+```{r echo=FALSE, fig.align='center'}
+wordcloud2(tdm.df, size=.5)
+```
+</center>
+
+
+---
+# Exemplo de dashboard
+
+- Polling Data - http://pollingdata.com.br/ - pesquisas eleitorais
+- Dashboard em Shiny - R
+
+---
+
 ## RStudio
 
 **RStudio** é o IDE da Linguagem R, ou seja, o ambiente que utilizamos para editar e executar os códigos em R.
@@ -131,18 +244,7 @@ Fonte: [CRAN Task View: Reproducible Research](https://cran.r-project.org/view=R
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
----
-## RStudio
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("imagens/01-rstudio.png")
-```
-Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
----
-## RStudio
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("imagens/01-rstudio-script.png")
-```
-Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
+
 ---
 ## Projetos
 
@@ -152,19 +254,6 @@ Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio
 > *"Um bom layout de projeto facilitará sua vida: ajudará a garantir a integridade de seus dados; facilita o compartilhamento de seu código com outra pessoa (colega de laboratório, colaborador ou orientador); ele permite que você facilmente faça o upload do seu código com a submissão do seu manuscrito; torna-se mais fácil recuperar o projeto depois de um intervalo. "*
 
 Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/02-project-intro/index.html)
-
----
-## Criando um projeto
-
-1. Clique na opção **“File”** do menu, e então em **“New Project”**.
-
-1.  Clique em **“New Directory”**.
-
-1.  Clique em **“New Project”**.
-
-1.  Escreva o nome do diretório (pasta) onde deseja manter seu projeto, ex “my_project”.
-
-1.  Clique no botão **“Create Project”**.
 
 ---
 ## Boas práticas para organizar seu projeto
@@ -231,6 +320,62 @@ knitr::include_graphics("imagens/1.PNG")
 knitr::include_graphics("imagens/New_R_Markdown.png")
 ```
 ---
+# yaml - metadados do documento:
+
+- Controla muitas das configurações do documento.
+
+```{r eval=FALSE}
+---
+title: "Untitled"
+author: "Beatriz MIlz"
+date: "27 de novembro de 2018"
+output: html_document
+---
+```
+
+
+- title: título
+- subtitle: subtítulo
+- author: autor
+- date: data
+- output: formato (Ex: html_document, pdf_document, etc).
+- Cuidado com a **identação**
+
+
+Leia também: [Output Formats - R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/output-formats.html)
+
+---
+##Adicionando campos de código - chunks
+
+```{r echo=FALSE, out.width="20%"}
+knitr::include_graphics("imagens/8.PNG")
+```
+- Aceita código em R, Python, SQL.
+
+- O que for código -> Colocar dentro de um campo de código (chunk).
+- O que for texto (também aceita markdown, html, css, javascript) -> Colocar fora do campo de código (chunk).
+
+- Para colocar comentários dentro do chunk, usar o **#**. Ex:
+```{r}
+# Se colocar um hashtag no inicio da linha, o que estiver a seguir nao será considerado como código.
+```
+
+
+Dica: Atalho para criar chunk: `Ctrl + ALt + I`.
+---
+## RStudio
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("imagens/01-rstudio.png")
+```
+Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
+---
+## RStudio
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("imagens/01-rstudio-script.png")
+```
+Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
+
+---
 ## Pacotes no R
 
 **Pacotes** são coleções de funções, dados e documentação que estendem as capacidades do R básico.
@@ -287,6 +432,17 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
+
+
+---
+
+# Pacotes - CRAN Task View
+
+- [CRAN Task View](https://cran.r-project.org/web/views/)
+
+- [CRAN Task View: Analysis of Ecological and Environmental Data](https://cran.r-project.org/web/views/Environmetrics.html) - Ex: Hydrology and Oceanography, Climatology, etc.
+
+- [CRAN Task View: Analysis of Spatial Data](https://cran.r-project.org/web/views/Spatial.html) - Ex: Ecological analysis, Geostatistics, etc.
 ---
 
 ## Help!
@@ -298,7 +454,7 @@ help(sum)
 ?sum
 ```
 
-- Se a dúvida permanecer, procure no Stack OverFlow, Google.
+- Se a dúvida permanecer, procure no [Stack OverFlow](https://pt.stackoverflow.com/), Google.
   - E se ainda tiver dúvidas, pergunte para a comunidade (há grupos no Telegram e outras redes sociais).
   
   
@@ -334,20 +490,6 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 - **List**: tipo especial de vetor que aceita elementos de classes diferentes. <br></br>
 - **Data.frame**: são tabelas de dados com linhas e colunas, como uma tabela do Excel. Como são listas, essas colunas podem ser de classes diferentes.
 
-
-
-
-Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
----
-
-## Atalhos importantes
-
-Os atalhos facilitam. Veja os principais:<br></br>
-
-- CTRL + ENTER: roda a linha selecionada no script.<br></br>
-- ALT + **-**: (<-) sinal de atribuição.<br></br>
-- CTRL + SHIFT + M: (%>%) operador pipe.<br></br>
-- CTRL + ALT + I: cria um chunk do RMarkdown.
 
 
 
@@ -400,17 +542,7 @@ exp(0.5) # e^(1/2)
 ```
 
 Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
----
 
-##Nomes de objetos e variáveis
-
-- Os nomes devem começar com uma letra. Podem conter letras, números, _ e .<br></br>
-- Recomendação do autor do livro R For Data Science: **usar_snake_case**, ou seja, palavras escritas em minúsculo separadas pelo underscore (_).<br></br>
-- O R é *case sensitive*, isto é, faz a diferenciação entre as letras minúsculas e maiúsculas. Portanto, um objeto chamado *teste* é diferente de um outro objeto chamado *Teste*.
-
-
-
-Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 ---
 
@@ -424,25 +556,35 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+---
 
+##Nomes de objetos e variáveis
+
+- Os nomes devem começar com uma letra. Podem conter letras, números, _ e .<br></br>
+- Recomendação do autor do livro R For Data Science: **usar_snake_case**, ou seja, palavras escritas em minúsculo separadas pelo underscore (_).<br></br>
+- O R é *case sensitive*, isto é, faz a diferenciação entre as letras minúsculas e maiúsculas. Portanto, um objeto chamado *teste* é diferente de um outro objeto chamado *Teste*.
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 ---
 
 ## Exemplos de objetos e atribuição de valores
 
 ```{r}
-nome_empregado <- "Tom Cruise de Souza e Silva"
-nome_empregado
-horas_trabalhadas <- 160
-horas_trabalhadas
-salario <- 3984.23
-salario
+nome_estudante <- "Tom Cruise de Souza e Silva"
+nome_estudante
+horas_pesquisa <- 160
+horas_pesquisa
+bolsa <- 1500.00
+bolsa
 ativo <- TRUE
 ativo
 ```
 
 
 
-Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+Fonte: Modificado de [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 
 
@@ -462,6 +604,40 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
+---
+## Exemplos
+
+```{r}
+bolsa_fapesp_mestrado <-2043
+bolsa_capes_mestrado <- 1500
+
+bolsa_capes_mestrado == bolsa_fapesp_mestrado
+
+bolsa_capes_mestrado >= bolsa_fapesp_mestrado
+
+bolsa_capes_mestrado <= bolsa_fapesp_mestrado
+```
+---
+## Exemplos
+
+- Comparação com vetores
+```{r}
+bolsas_fapesp <- c(695.70, 2043,  3010.80, 7373.10) 
+
+bolsas_fapesp >= bolsa_capes_mestrado
+```
+---
+## Exemplos
+- Operações com vetores
+```{r}
+aluguel_kitnet_barata <- 806
+aluguel_kitnet_cara <- 1743
+
+bolsas_fapesp - aluguel_kitnet_barata
+
+bolsas_fapesp - aluguel_kitnet_cara
+```
+Fonte dos valores: http://www.custodevida.com.br/sp/sao-paulo/
 ---
 
 ## Operadores Lógicos
@@ -511,8 +687,6 @@ NA == NA
 
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
-
-
 ---
 
 ## O Tidyverse
@@ -571,9 +745,35 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 ---
 ## Importar arquivos:
-RStudio -> Environment -> Import Dataset 
+- Via **código (próximo slide)**, ou via **"Import Dataset"**
+- RStudio -> Environment -> **Import Dataset **
+  - From Excel -> arquivos xls
+  - From text (readr) -> csv
+  - File/URL - Colocar o link da tabela (se estiver online), ou colocar o caminho da tabela no seu projeto
+  - Update - Se selecionar URL, após colar a URL clique em UPDATE. O R irá procurar essa tabela, e caso encontre, apresentará uma "amostra" da sua tabela. 
+  - **SEMPRE copie o Code Preview**, e guarde no seu código para que você tenha o registro das etapas realizadas (lembre-se da reprodutibilidade).
+  
 
-(Estou escrevendo esse slide)
+---
+## Importar arquivos:
+- Exercício: importar a planilha de proposta de orçamento de 2019 da Prefeitura Municipal de São Paulo: [Site](http://orcamento.sf.prefeitura.sp.gov.br/orcamento/proposta.php) e [Link para a tabela](http://orcamento.sf.prefeitura.sp.gov.br/orcamento/uploads/2019/BaseDados.xls).
+
+```{r echo=FALSE, out.width="100%", fig.cap=""}
+knitr::include_graphics("imagens/import.png")
+```
+
+
+---
+# Code preview
+```{r, cache=TRUE}
+library(readxl)
+url <- "http://orcamento.sf.prefeitura.sp.gov.br/orcamento/uploads/2019/BaseDados.xls"
+destfile <- "proposta_pmsp_2019.xls"
+curl::curl_download(url, destfile)
+proposta_pmsp_2019 <- read_excel(destfile)
+View(proposta_pmsp_2019)
+```
+
 ---
 
 ### View e Summary
@@ -583,13 +783,39 @@ RStudio -> Environment -> Import Dataset
 - **summary()**: mostra informações sobre as colunas do dataframe:
 
 ```{r}
-summary(mtcars)
+summary(proposta_pmsp_2019)
 ```
 
 
 Fonte: Editado - [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 
+---
+Soma:
+
+```{r}
+sum(proposta_pmsp_2019$SALDO_ORÇ) #soma do orçamento (em reais)
+```
+```{r}
+sum(proposta_pmsp_2019$SALDO_ORÇ) / 10^9 #transformar em bilhões
+```
+
+Média
+
+```{r}
+mean(proposta_pmsp_2019$SALDO_ORÇ)
+```
+
+Desvio Padrão
+```{r}
+sd(proposta_pmsp_2019$SALDO_ORÇ)
+```
+---
+```{r}
+# Boxplot of MPG by Car Cylinders
+boxplot(mpg~cyl,data=mtcars, main="Car Milage Data",
+   xlab="Number of Cylinders", ylab="Miles Per Gallon") 
+```
 
 ---
 ## O operador %>%, o Pipe
@@ -652,6 +878,23 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 - **group_by**(): agrupa colunas
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
+
+---
+##Exemplo dplyr
+
+```{r}
+proposta_pmsp_2019_ga <- proposta_pmsp_2019 %>% 
+  filter(DESC_FUNCAO == "Gestão Ambiental")
+
+```
+---
+##Exemplo dplyr
+```{r}
+proposta_pmsp_2019_ga2 <-proposta_pmsp_2019 %>% 
+  filter(DESC_FUNCAO == "Gestão Ambiental")%>% 
+  arrange(desc(SALDO_ORÇ))
+```
+
 ---
 # ggplot2 
 
@@ -667,6 +910,20 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 knitr::include_graphics("imagens/ggplot2.png")
 ```
 
+---
+
+## Atalhos importantes
+
+Os atalhos facilitam. Veja os principais:<br></br>
+
+- CTRL + ENTER: roda a linha selecionada no script.<br></br>
+- ALT + **-**: (<-) sinal de atribuição.<br></br>
+- CTRL + SHIFT + M: (%>%) operador pipe.<br></br>
+- CTRL + ALT + I: cria um chunk do RMarkdown.
+
+
+
+Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 
 ---
@@ -717,7 +974,7 @@ library(tidyverse)
 ---
 # Estudo de caso
 
-Fonte: Tabela elaborada pelo LAPLAM - UFABC
+Fonte: Tabela elaborada pelo LAPLAN - UFABC
 Atualizado em outubro/2018
 
 ```{r message=FALSE, warning=FALSE}
@@ -843,7 +1100,7 @@ class: center, middle
 **Objetivos:** Explorar os dados referentes à Macrometrópole Paulista.
 
 ---
-# Estudo de caso
+# Estudo de caso - Utilidade com relatórios dinâmicos
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
 #Ler o arquivo csv criado:
@@ -926,6 +1183,8 @@ class: center, middle
 [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 [R for Reproducible Scientific Analysis - SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/)
+
+(mais referências nos próximos slides)
 ---
 # Onde estudar mais?
 - [Repositório de materias de estudo com R](https://github.com/beatrizmilz/materiais_estudo_R)
