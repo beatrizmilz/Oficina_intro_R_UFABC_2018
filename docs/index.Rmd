@@ -257,18 +257,7 @@ wordcloud2(tdm.df, size=.5)
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
----
-## RStudio
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("imagens/01-rstudio.png")
-```
-Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
----
-## RStudio
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("imagens/01-rstudio-script.png")
-```
-Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
+
 ---
 ## Projetos
 
@@ -304,6 +293,78 @@ Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/02-project
 1.  Clique no botão **“Create Project”**.
 
 
+OBS: Crie um novo script para escrever seus códigos!
+  **File -> New File -> RScript **
+
+---
+## RStudio
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("imagens/01-rstudio.png")
+```
+Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
+---
+## RStudio
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("imagens/01-rstudio-script.png")
+```
+Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
+
+
+---
+## RStudio
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("imagens/haydee1.jpg")
+```
+Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
+
+---
+## RStudio
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("imagens/haydee2.jpg")
+```
+Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
+
+---
+## RStudio
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("imagens/haydee3.jpg")
+```
+Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
+
+---
+## RStudio
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("imagens/haydee4.jpg")
+```
+Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
+
+---
+## RStudio
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("imagens/haydee5.jpg")
+```
+Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
+
+---
+## RStudio
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("imagens/haydee6.jpg")
+```
+Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
+
+---
+## RStudio
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("imagens/haydee7.jpg")
+```
+Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
+
+---
+## RStudio
+```{r echo=FALSE, out.width="90%"}
+knitr::include_graphics("imagens/haydee8.jpg")
+```
+Fonte: [Haydee Svab](https://www.slideshare.net/mobile/haydeesvab/anlise-crtica-de-dados-primeiros-passos-com-r)
 
 ---
 ## Pacotes no R
@@ -903,19 +964,47 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 ---
 ##Exemplo dplyr
 
+- A partir da proposta de orçamento da Prefeitura Municipal de São Paulo para 2019, filtre os dados referentes à função Gestão Ambiental e organize o saldo orçado de forma decrescente. 
+
+
 ```{r}
-proposta_pmsp_2019_ga <- proposta_pmsp_2019 %>% 
-  filter(DESC_FUNCAO == "Gestão Ambiental")
+proposta_pmsp_2019_ga <-
+  proposta_pmsp_2019 %>% 
+  filter(DESC_FUNCAO == "Gestão Ambiental")%>% 
+  arrange(desc(SALDO_ORÇ))
+
+head(proposta_pmsp_2019_ga,5)
+
+
 
 ```
 ---
-##Exemplo dplyr
-```{r}
-proposta_pmsp_2019_ga2 <-proposta_pmsp_2019 %>% 
-  filter(DESC_FUNCAO == "Gestão Ambiental")%>% 
-  arrange(desc(SALDO_ORÇ))
-```
+##Exemplo dplyr - DESAFIO!
 
+- A partir da proposta de orçamento da Prefeitura Municipal de São Paulo para 2019:
+
+1) filtre os dados referrentes à função Urbanismo;
+
+2) organize o saldo orçado de forma decrescente. 
+---
+# Resposta 
+
+```{r}
+proposta_pmsp_2019_desafio <-proposta_pmsp_2019 %>% 
+  filter(DESC_FUNCAO == "Urbanismo")%>% 
+  arrange(desc(SALDO_ORÇ))
+head(proposta_pmsp_2019_desafio)
+```
+---
+
+- A partir da proposta de orçamento da Prefeitura Municipal de São Paulo para 2019: filtre os dados referrentes à função Urbanismo; Apresente a soma de saldo orçado para as subfunções de urbanismo.
+```{r}
+proposta_pmsp_2019_desafio2 <-proposta_pmsp_2019 %>% 
+  filter(DESC_FUNCAO == "Urbanismo")%>% 
+  group_by(DESC_SUBFUNCAO) %>% 
+  summarise(soma = sum(SALDO_ORÇ)) 
+head(proposta_pmsp_2019_desafio2)
+```
 ---
 # ggplot2 
 
