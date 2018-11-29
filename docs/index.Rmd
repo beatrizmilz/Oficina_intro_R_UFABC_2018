@@ -1,6 +1,6 @@
 ---
 title: "Oficina de Introdução ao Software R"
-subtitle: "UFABC - Campus São Bernardo do Campo"
+subtitle: "UFABC - Campus São Bernardo do Campo <br><br> [http://bit.ly/rUFABC](http://bit.ly/rUFABC)"
 author: "Beatriz Milz"
 date: "29/11/2018"
 output:
@@ -19,6 +19,19 @@ output:
 knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
 ```
 
+# Sobre a oficina de introdução ao R
+
+- Oficina introdutória
+
+- Oferecida pelo LAPLAN e [MACROAMB](http://govamb.iee.usp.br/). 
+
+- 2a Edição (a primeira aconteceu em outubro no IEE)
+
+- A oficina tem como objetivo introduzir os pesquisadores sobre as possibilidades de utilização do software R como ferramenta para manipulação e análise de dados em pesquisas e projetos científicos. 
+
+- Cooperar para a difusão de **ferramentas gratuitas** e colaborativas na elaboração de pesquisas e produção de conhecimento científico.
+
+---
 # Instrutora
 
 * **Beatriz Milz**
@@ -244,7 +257,18 @@ wordcloud2(tdm.df, size=.5)
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
-
+---
+## RStudio
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("imagens/01-rstudio.png")
+```
+Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
+---
+## RStudio
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("imagens/01-rstudio-script.png")
+```
+Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
 ---
 ## Projetos
 
@@ -279,101 +303,7 @@ Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/02-project
 
 1.  Clique no botão **“Create Project”**.
 
----
 
-## Rmarkdown
-* É um tipo de arquivo que suporta códigos em R, texto, markdown e outros formatos.
-* O markdown é uma linguagem de marcação simples. 
-
-* [Rmarkdown Cheatsheet](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
-* Possibilita exportar diferentes tipos de arquivos.
-<br>
-
-```{r echo=FALSE, out.width="40%", fig.cap=""}
-knitr::include_graphics("imagens/markdown.png")
-```
----
-## Vantagens de trabalhar com o R e o Rmarkdown
-
-É possível elaborar relatórios no Rmarkdown.
-Porque é interessante?
-
-* É possível escrever os códigos que geram as tabelas e gráficos.
-
-
-* Quando o banco de dados for atualizado não será necessário refazer os gráficos. Apenas necessário compilar novamente.
-
-
-* Facilita o compartilhamento dos dados e análises com outros pesquisadores.
-
-
-* É possível exportar em diversos formatos, inclusive transformar o relatório em apresentações. 
----
-
-## Já temos um projeto, agora vamos criar um arquivo .Rmd
-
-```{r echo=FALSE, out.width="20%"}
-knitr::include_graphics("imagens/1.PNG")
-```
-
-```{r echo=FALSE, out.width="50%"}
-knitr::include_graphics("imagens/New_R_Markdown.png")
-```
----
-# yaml - metadados do documento:
-
-- Controla muitas das configurações do documento.
-
-```{r eval=FALSE}
----
-title: "Untitled"
-author: "Beatriz MIlz"
-date: "27 de novembro de 2018"
-output: html_document
----
-```
-
-
-- title: título
-- subtitle: subtítulo
-- author: autor
-- date: data
-- output: formato (Ex: html_document, pdf_document, etc).
-- Cuidado com a **identação**
-
-
-Leia também: [Output Formats - R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/output-formats.html)
-
----
-##Adicionando campos de código - chunks
-
-```{r echo=FALSE, out.width="20%"}
-knitr::include_graphics("imagens/8.PNG")
-```
-- Aceita código em R, Python, SQL.
-
-- O que for código -> Colocar dentro de um campo de código (chunk).
-- O que for texto (também aceita markdown, html, css, javascript) -> Colocar fora do campo de código (chunk).
-
-- Para colocar comentários dentro do chunk, usar o **#**. Ex:
-```{r}
-# Se colocar um hashtag no inicio da linha, o que estiver a seguir nao será considerado como código.
-```
-
-
-Dica: Atalho para criar chunk: `Ctrl + ALt + I`.
----
-## RStudio
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("imagens/01-rstudio.png")
-```
-Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
----
-## RStudio
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("imagens/01-rstudio-script.png")
-```
-Fonte: [SW Carpentry](http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html)
 
 ---
 ## Pacotes no R
@@ -463,6 +393,89 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 ---
 
+## Rmarkdown
+* É um tipo de arquivo que suporta códigos em R, texto, markdown e outros formatos.
+* O markdown é uma linguagem de marcação simples. 
+
+* [Rmarkdown Cheatsheet](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+* Possibilita exportar diferentes tipos de arquivos.
+<br>
+
+```{r echo=FALSE, out.width="40%", fig.cap=""}
+knitr::include_graphics("imagens/markdown.png")
+```
+---
+## Vantagens de trabalhar com o R e o Rmarkdown
+
+É possível elaborar relatórios no Rmarkdown.
+Porque é interessante?
+
+* É possível escrever os códigos que geram as tabelas e gráficos.
+
+
+* Quando o banco de dados for atualizado não será necessário refazer os gráficos. Apenas necessário compilar novamente.
+
+
+* Facilita o compartilhamento dos dados e análises com outros pesquisadores.
+
+
+* É possível exportar em diversos formatos, inclusive transformar o relatório em apresentações. 
+---
+
+## Já temos um projeto, agora vamos criar um arquivo .Rmd
+
+```{r echo=FALSE, out.width="20%"}
+knitr::include_graphics("imagens/1.PNG")
+```
+
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("imagens/New_R_Markdown.png")
+```
+---
+# yaml - metadados do documento:
+
+- Controla muitas das configurações do documento.
+
+```{r eval=FALSE}
+---
+title: "Untitled"
+author: "Beatriz MIlz"
+date: "27 de novembro de 2018"
+output: html_document
+---
+```
+
+
+- title: título
+- subtitle: subtítulo
+- author: autor
+- date: data
+- output: formato (Ex: html_document, pdf_document, etc).
+- Cuidado com a **identação**
+
+
+Leia também: [Output Formats - R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/output-formats.html)
+
+---
+##Adicionando campos de código - chunks
+
+```{r echo=FALSE, out.width="20%"}
+knitr::include_graphics("imagens/8.PNG")
+```
+- Aceita código em R, Python, SQL.
+
+- O que for código -> Colocar dentro de um campo de código (chunk).
+- O que for texto (também aceita markdown, html, css, javascript) -> Colocar fora do campo de código (chunk).
+
+- Para colocar comentários dentro do chunk, usar o **#**. Ex:
+```{r}
+# Se colocar um hashtag no inicio da linha, o que estiver a seguir nao será considerado como código.
+```
+
+
+Dica: Atalho para criar chunk: `Ctrl + ALt + I`.
+---
+
 ## Classes Básicas ou Atômicas do R
 
 - **Character**: texto
@@ -495,6 +508,14 @@ Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
 Fonte: [Maria Marinho](https://github.com/MaryMS/2018-11-R-Course-FatecZS)
 
+---
+# Dataframes  - Tidy data
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("imagens/tidy-1.png")
+```
+
+Fonte: [Data Science with R by Garrett Grolemund](http://garrettgman.github.io/tidying/)
 ---
 
 ## R como calculadora
